@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>وب‌یـار | توسعه وب امن و هوشمند با طراحی نئونی</title>
+  <meta name="description" content="استودیوی وب‌یـار با رویکردی امن و خلاق، وب‌سایت‌های شیشه‌ای و نئونی می‌سازد؛ از طراحی هیبریدی تا پشتیبانی ۲۴/۷ و مشاوره امنیت دیجیتال.">
+  <meta name="keywords" content="طراحی سایت، امنیت وب، توسعه سه‌بعدی، سئو پیشرفته، وب‌یـار">
+  <link rel="canonical" href="https://insta-webyar.example.com/">
+  <meta property="og:title" content="وب‌یـار | توسعه وب امن و هوشمند">
+  <meta property="og:description" content="کسب‌وکار خود را با طراحی نئونی، تجربه کاربری روان و امنیت لایه‌ای وب‌یـار ارتقا دهید.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://insta-webyar.example.com/">
+  <meta property="og:image" content="https://insta-webyar.example.com/assets/og-cover.jpg">
+  <meta property="og:locale" content="fa_IR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="وب‌یـار | توسعه وب امن و هوشمند">
+  <meta name="twitter:description" content="با وب‌یـار، تجربه‌ای متفاوت از طراحی سایت، امنیت پیشرفته و پشتیبانی متخصصانه داشته باشید.">
+  <meta name="twitter:image" content="https://insta-webyar.example.com/assets/og-cover.jpg">
+  <meta name="twitter:site" content="@webyar">
+  <meta name="theme-color" content="#0f1624">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "استودیوی وب‌یـار",
+    "url": "https://insta-webyar.example.com/",
+    "image": "https://insta-webyar.example.com/assets/og-cover.jpg",
+    "description": "ارائه‌دهنده طراحی وب نئونی، امنیت سایبری و پشتیبانی مداوم برای برندهای مدرن.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IR",
+      "addressLocality": "تهران",
+      "streetAddress": "خیابان نوآوری، پلاک ۴۲"
+    },
+    "priceRange": "IRR 15000000 - IRR 95000000",
+    "telephone": "+98-21-1234-5678",
+    "sameAs": [
+      "https://t.me/webyar",
+      "https://wa.me/989121234567",
+      "https://www.linkedin.com/company/webyar"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg-gradient: radial-gradient(circle at top, #1a2140 0%, #0b0f21 45%, #04060f 100%);
+      --neon-cyan: #1ef2ff;
+      --neon-purple: #b41eff;
+      --glass: rgba(15, 22, 36, 0.65);
+      --glass-border: rgba(30, 242, 255, 0.3);
+      --text-primary: #f8fbff;
+      --text-secondary: #a8b1d4;
+      font-family: "Vazirmatn", "IRANSans", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-gradient);
+      color: var(--text-primary);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--neon-cyan);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--neon-purple);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(4, 6, 15, 0.85);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .container {
+      width: min(95%, 1100px);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      border-color: var(--neon-cyan);
+      outline: none;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+
+    main section {
+      padding: 4rem 0;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin: 0.5rem 0 1rem;
+      color: var(--text-secondary);
+    }
+
+    .hero {
+      display: grid;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero canvas {
+      width: 100%;
+      height: 320px;
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      background: rgba(10, 16, 30, 0.8);
+    }
+
+    .hero-fallback {
+      display: none;
+      padding: 2rem;
+      border-radius: 24px;
+      border: 1px dashed var(--glass-border);
+      background: rgba(10, 16, 30, 0.6);
+      color: var(--text-secondary);
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--neon-cyan);
+      background: rgba(12, 20, 40, 0.7);
+      color: var(--text-primary);
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 18px rgba(30, 242, 255, 0.15);
+    }
+
+    .btn.secondary {
+      border-color: var(--neon-purple);
+      box-shadow: 0 0 18px rgba(180, 30, 255, 0.18);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(30, 242, 255, 0.25);
+    }
+
+    .btn.secondary:hover {
+      box-shadow: 0 10px 28px rgba(180, 30, 255, 0.3);
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--glass);
+      border-radius: 20px;
+      padding: 1.8rem;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 12px 32px rgba(3, 8, 20, 0.45);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(30, 242, 255, 0.08), rgba(180, 30, 255, 0.12));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      display: inline-flex;
+      width: 3.5rem;
+      height: 3.5rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(30, 242, 255, 0.2), rgba(180, 30, 255, 0.2));
+      margin-bottom: 1rem;
+    }
+
+    .pricing-table {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .pricing-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .step-list {
+      counter-reset: steps;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .step {
+      position: relative;
+      padding-right: 3.5rem;
+    }
+
+    .step::before {
+      counter-increment: steps;
+      content: counter(steps);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(30, 242, 255, 0.3), rgba(180, 30, 255, 0.3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--text-primary);
+      box-shadow: 0 0 20px rgba(30, 242, 255, 0.25);
+    }
+
+    .testimonials, .articles {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(9, 15, 28, 0.7);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      padding: 1.2rem 1.4rem;
+      text-align: right;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 1.4rem;
+    }
+
+    .faq-answer.open {
+      padding: 0 1.4rem 1.2rem;
+      max-height: 180px;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      background: rgba(8, 14, 27, 0.75);
+      padding: 2rem;
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 18px 45px rgba(4, 10, 25, 0.55);
+    }
+
+    label {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    input, textarea, select {
+      padding: 0.75rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(2, 6, 18, 0.85);
+      color: var(--text-primary);
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: 1px solid var(--neon-cyan);
+      box-shadow: 0 0 0 3px rgba(30, 242, 255, 0.2);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--glass-border);
+      background: rgba(4, 6, 15, 0.85);
+      backdrop-filter: blur(18px);
+    }
+
+    .glow {
+      animation: glowPulse 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from {
+        box-shadow: 0 0 18px rgba(30, 242, 255, 0.12);
+      }
+      to {
+        box-shadow: 0 0 42px rgba(180, 30, 255, 0.35);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+        text-align: right;
+      }
+
+      .cta-group {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pricing-table {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .testimonials {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .articles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      form .full-width {
+        grid-column: span 2;
+      }
+    }
+  </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo" aria-label="استودیوی وب‌یـار">
+        <span>وب‌یـار</span>
+        <small>توسعه امن</small>
+      </div>
+      <nav aria-label="مسیرهای اصلی">
+        <ul>
+          <li><a href="#hero">شروع</a></li>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#benefits">مزایا</a></li>
+          <li><a href="#pricing">قیمت‌ها</a></li>
+          <li><a href="#process">فرآیند</a></li>
+          <li><a href="#contact">تماس</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="hero" class="hero container" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">توسعه وب سه‌بعدی با امنیت سپرگون</h1>
+        <p>ما ترکیبی از طراحی نئونی، فناوری سه‌بعدی و امنیت لایه‌ای را برای رشد دیجیتال شما به کار می‌گیریم. تجربه‌ای شیشه‌ای، سریع و مطمئن برای مخاطبانتان بسازید.</p>
+        <div class="cta-group">
+          <a class="btn glow" href="#contact">رزرو جلسه استراتژی</a>
+          <a class="btn secondary" href="#services">مشاهده بسته‌های خدماتی</a>
+        </div>
+      </div>
+      <div>
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        <div class="hero-fallback" id="heroFallback" role="img" aria-label="تصویر ایستا از سپر و قفل دیجیتال با نور نئونی">
+          <strong>مرورگر شما از WebGL پشتیبانی نمی‌کند.</strong>
+          <p>نگران نباشید؛ همچنان می‌توانید خدمات امنیتی و طراحی سه‌بعدی وب‌یـار را تجربه کنید.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container" aria-labelledby="services-title">
+      <h2 id="services-title">خدمات تخصصی وب‌یـار</h2>
+      <p>هر آنچه برای ساخت و نگهداری یک حضور دیجیتال متمایز نیاز دارید، در قالب خدماتی یکپارچه ارائه می‌شود.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🎨</div>
+          <h3>طراحی رابط نئونی</h3>
+          <p>طراحی رابط کاربری شیشه‌ای، واکنش‌گرا و دسترس‌پذیر با الگوهای تعاملی نرم و انیمیشن‌های روان.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🔐</div>
+          <h3>امنیت و سخت‌سازی</h3>
+          <p>ارزیابی امنیتی، پیاده‌سازی سپرهای WAF و مانیتورینگ ۲۴/۷ برای حفاظت از داده‌ها.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">⚙️</div>
+          <h3>اتوماسیون و یکپارچه‌سازی</h3>
+          <p>اتصال سرویس‌های CRM، زیرساخت ابری و ربات‌های پاسخ‌گو برای کاهش هزینه‌های عملیاتی.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🚀</div>
+          <h3>شتاب‌دهی سئو</h3>
+          <p>تحلیل داده، بهینه‌سازی Lighthouse و تدوین استراتژی محتوا جهت رشد ارگانیک پایدار.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="benefits" class="container" aria-labelledby="benefits-title">
+      <h2 id="benefits-title">چرا برندها وب‌یـار را انتخاب می‌کنند؟</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="icon" aria-hidden="true">🛡️</div>
+          <h3>اعتماد سپرگون</h3>
+          <p>امنیت چندلایه با تست نفوذ فصلی و پشتیبانی اضطراری در کمتر از ۳۰ دقیقه.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">💡</div>
+          <h3>نوآوری مستمر</h3>
+          <p>استفاده از واقعیت تعاملی و سه‌بعدی برای تجربه‌هایی که در ذهن مشتریان می‌ماند.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">📈</div>
+          <h3>رشد سنجش‌پذیر</h3>
+          <p>گزارش‌های تحلیلی شفاف و KPIهای قابل اندازه‌گیری برای هر کمپین.</p>
+        </article>
+        <article class="card">
+          <div class="icon" aria-hidden="true">🤝</div>
+          <h3>همراهی انسانی</h3>
+          <p>آموزش تیم شما، انتقال دانش و جلسات ماهانه به‌روزرسانی استراتژی.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="container" aria-labelledby="pricing-title">
+      <h2 id="pricing-title">پکیج‌های سرمایه‌گذاری در تجربه دیجیتال</h2>
+      <div class="pricing-table">
+        <article class="card pricing-card">
+          <h3>استارت نئونی</h3>
+          <p><strong>۴۵,۰۰۰,۰۰۰ ریال</strong> / ماه</p>
+          <ul>
+            <li>طراحی واکنش‌گرا سه‌صفحه‌ای</li>
+            <li>گواهی SSL و پشتیبانی ۸/۵</li>
+            <li>آموزش تیم محتوا</li>
+          </ul>
+          <a class="btn" href="#contact">شروع همکاری</a>
+        </article>
+        <article class="card pricing-card glow">
+          <h3>رشد ایمن</h3>
+          <p><strong>۸۵,۰۰۰,۰۰۰ ریال</strong> / ماه</p>
+          <ul>
+            <li>طراحی تعاملی ۶ صفحه</li>
+            <li>تست نفوذ فصلی و مانیتورینگ</li>
+            <li>اتوماسیون بازاریابی</li>
+          </ul>
+          <a class="btn" href="#contact">درخواست مشاوره</a>
+        </article>
+        <article class="card pricing-card">
+          <h3>امپاور شرکتی</h3>
+          <p><strong>۱۲۵,۰۰۰,۰۰۰ ریال</strong> / ماه</p>
+          <ul>
+            <li>طراحی سفارشی سه‌بعدی</li>
+            <li>DevSecOps و SOC اختصاصی</li>
+            <li>تجزیه و تحلیل هوش تجاری</li>
+          </ul>
+          <a class="btn" href="#contact">هم‌مسیر شوید</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="process" class="container" aria-labelledby="process-title">
+      <h2 id="process-title">نقشه راه همکاری ما</h2>
+      <div class="step-list">
+        <article class="card step">
+          <h3>کشف و هم‌سویی</h3>
+          <p>جلسه تحلیل نیازها، کشف اهداف و انتخاب KPIهای کلیدی.</p>
+        </article>
+        <article class="card step">
+          <h3>طراحی تجربه</h3>
+          <p>تهیه پروتوتایپ تعاملی، طراحی سیستم نئونی و معماری محتوا.</p>
+        </article>
+        <article class="card step">
+          <h3>توسعه سپرگون</h3>
+          <p>کدنویسی ماژولار، تقویت امنیت و اتصال به سرویس‌های حیاتی.</p>
+        </article>
+        <article class="card step">
+          <h3>لانچ و رشد</h3>
+          <p>راه‌اندازی کنترل‌شده، پایش داده‌ها و بهینه‌سازی مستمر.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimonials" class="container" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">صدای مشتریان سپرگون</h2>
+      <div class="testimonials">
+        <article class="card">
+          <p>«پس از همکاری با وب‌یـار، نرخ تبدیل ما ۳۵٪ رشد کرد و خیالم از امنیت داده‌ها راحت شد.»</p>
+          <strong>سحر رضایی، مدیر بازاریابی فین‌تک نوآور</strong>
+        </article>
+        <article class="card">
+          <p>«تجربه سه‌بعدی و شیشه‌ای وب‌سایت باعث شد برندمان میان رقبای صنعت گردشگری بدرخشد.»</p>
+          <strong>مجید نیک‌خواه، بنیان‌گذار سفرنگار</strong>
+        </article>
+        <article class="card">
+          <p>«پشتیبانی ۲۴/۷ و گزارش‌های شفاف باعث شد تیم داخلی ما همیشه یک قدم جلوتر باشد.»</p>
+          <strong>الهام شریفی، مدیر فناوری گروه سپهر</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="articles" class="container" aria-labelledby="articles-title">
+      <h2 id="articles-title">بینش‌های تازه از وب‌یـار</h2>
+      <div class="articles">
+        <article class="card">
+          <h3>راهنمای طراحی شیشه‌ای برای برندهای لوکس</h3>
+          <p>چگونه با ترکیب شفافیت و نئون، تجربه‌ای متفاوت در صفحات فرود ایجاد کنیم.</p>
+          <a href="#" class="btn secondary">مطالعه مقاله</a>
+        </article>
+        <article class="card">
+          <h3>چک‌لیست امنیت لایه‌ای پس از راه‌اندازی</h3>
+          <p>گام‌های عملی برای محافظت از داده‌ها پس از لانچ، از مانیتورینگ تا واکنش.</p>
+          <a href="#" class="btn secondary">دانلود چک‌لیست</a>
+        </article>
+        <article class="card">
+          <h3>آینده تجربه وب سه‌بعدی در ایران</h3>
+          <p>بررسی روندهای جدید در تعاملی‌سازی وب‌سایت‌ها و نقش WebGL در آن.</p>
+          <a href="#" class="btn secondary">مشاهده گزارش</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="container" aria-labelledby="faq-title">
+      <h2 id="faq-title">پرسش‌های پرتکرار</h2>
+      <div class="grid">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            هزینه طراحی سه‌بعدی چگونه محاسبه می‌شود؟
+            <span aria-hidden="true">➕</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>براساس پیچیدگی سناریوهای تعاملی، تعداد صفحات و نیازهای امنیتی محاسبه می‌شود. پس از جلسه کشف، پیش‌فاکتور رسمی ارسال می‌کنیم.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            آیا خدمات پشتیبانی ۲۴/۷ دارید؟
+            <span aria-hidden="true">➕</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>بله، پلن رشد ایمن و امپاور شرکتی شامل مرکز عملیات امنیتی شبانه‌روزی و پاسخ اضطراری است.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            مدت زمان پیاده‌سازی پروژه‌ها چقدر است؟
+            <span aria-hidden="true">➕</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>پروژه‌های استارت نئونی بین ۴ تا ۶ هفته و پروژه‌های شرکتی بسته به یکپارچه‌سازی‌ها تا ۱۲ هفته زمان می‌برد.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container" aria-labelledby="contact-title">
+      <h2 id="contact-title">درخواست مشاوره رایگان</h2>
+      <p>فرم زیر را پر کنید تا در کمتر از ۱۲ ساعت با شما تماس بگیریم و مسیر رشد دیجیتال برندتان را طراحی کنیم.</p>
+      <form id="contactForm" novalidate>
+        <label>
+          نام و نام خانوادگی
+          <input type="text" name="name" required placeholder="نام کامل شما">
+        </label>
+        <label>
+          ایمیل سازمانی
+          <input type="email" name="email" required placeholder="name@company.ir">
+        </label>
+        <label>
+          شماره تماس
+          <input type="tel" name="phone" required placeholder="0912xxxxxxx" pattern="^09[0-9]{9}$">
+        </label>
+        <label>
+          صنعت فعالیت
+          <select name="industry" required>
+            <option value="">انتخاب کنید</option>
+            <option value="tech">فناوری</option>
+            <option value="finance">مالی و فین‌تک</option>
+            <option value="retail">خرده‌فروشی</option>
+            <option value="health">سلامت و درمان</option>
+          </select>
+        </label>
+        <label class="full-width">
+          توضیحات پروژه
+          <textarea name="message" required placeholder="اهداف، چالش‌ها و نتیجه مورد انتظار را شرح دهید."></textarea>
+        </label>
+        <button type="submit" class="btn glow full-width">ارسال و دریافت مشاوره رایگان</button>
+      </form>
+      <div class="contact-links">
+        <a href="https://wa.me/989121234567" target="_blank" rel="noopener">💬 گفتگو در واتساپ</a>
+        <a href="https://t.me/webyar" target="_blank" rel="noopener">📨 پیام در تلگرام</a>
+        <a href="mailto:hello@webyar.ir">✉️ ارسال ایمیل به hello@webyar.ir</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© ۱۴۰۳ استودیوی وب‌یـار. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqButtons = document.querySelectorAll('.faq-question');
+      faqButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          const answer = btn.nextElementSibling;
+          if (!expanded) {
+            answer.classList.add('open');
+          } else {
+            answer.classList.remove('open');
+          }
+        });
+      });
+
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', event => {
+        const formData = new FormData(form);
+        let isValid = true;
+        for (const [key, value] of formData.entries()) {
+          if (!value.trim()) {
+            isValid = false;
+            break;
+          }
+        }
+        const email = form.elements.namedItem('email');
+        const phone = form.elements.namedItem('phone');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value)) {
+          isValid = false;
+          email.setCustomValidity('ایمیل معتبر وارد کنید.');
+        } else {
+          email.setCustomValidity('');
+        }
+        if (!/^09[0-9]{9}$/.test(phone.value)) {
+          isValid = false;
+          phone.setCustomValidity('شماره موبایل باید با 09 شروع شده و 11 رقم باشد.');
+        } else {
+          phone.setCustomValidity('');
+        }
+        if (!isValid) {
+          event.preventDefault();
+          form.reportValidity();
+        } else {
+          event.preventDefault();
+          alert('درخواست شما ثبت شد. تیم ما به زودی تماس می‌گیرد.');
+          form.reset();
+        }
+      });
+
+      const canvas = document.getElementById('heroCanvas');
+      const fallback = document.getElementById('heroFallback');
+
+      const isWebGLAvailable = () => {
+        try {
+          const testCanvas = document.createElement('canvas');
+          return !!window.WebGLRenderingContext && (
+            testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl')
+          );
+        } catch (e) {
+          return false;
+        }
+      };
+
+      if (!isWebGLAvailable()) {
+        canvas.style.display = 'none';
+        fallback.style.display = 'block';
+        return;
+      }
+
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x06090f, 0.02);
+
+      const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+      camera.position.set(0, 1.2, 4.2);
+
+      const ambientLight = new THREE.AmbientLight(0x4fd8ff, 0.7);
+      scene.add(ambientLight);
+
+      const pointLight = new THREE.PointLight(0xb41eff, 2.4, 15);
+      pointLight.position.set(2, 3, 2);
+      scene.add(pointLight);
+
+      const group = new THREE.Group();
+      scene.add(group);
+
+      const shieldGeometry = new THREE.Shape();
+      shieldGeometry.moveTo(0, 1.2);
+      shieldGeometry.quadraticCurveTo(1, 0.8, 0.8, -0.2);
+      shieldGeometry.quadraticCurveTo(0.5, -1.4, 0, -1.8);
+      shieldGeometry.quadraticCurveTo(-0.5, -1.4, -0.8, -0.2);
+      shieldGeometry.quadraticCurveTo(-1, 0.8, 0, 1.2);
+
+      const extrudeSettings = { depth: 0.3, bevelEnabled: true, bevelSegments: 8, steps: 2, bevelSize: 0.1, bevelThickness: 0.08 };
+      const shieldMesh = new THREE.Mesh(
+        new THREE.ExtrudeGeometry(shieldGeometry, extrudeSettings),
+        new THREE.MeshStandardMaterial({ color: 0x1ef2ff, metalness: 0.8, roughness: 0.2, emissive: 0x0a1f2f, emissiveIntensity: 0.7 })
+      );
+      shieldMesh.rotation.x = Math.PI / 10;
+      group.add(shieldMesh);
+
+      const lockGroup = new THREE.Group();
+      const bodyGeometry = new THREE.BoxGeometry(0.9, 1, 0.3);
+      const bodyMaterial = new THREE.MeshStandardMaterial({ color: 0x0d6dfd, metalness: 0.9, roughness: 0.25, emissive: 0x112455, emissiveIntensity: 0.6 });
+      const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+      lockGroup.add(body);
+
+      const shackleGeometry = new THREE.TorusGeometry(0.5, 0.08, 16, 100, Math.PI);
+      const shackleMaterial = new THREE.MeshStandardMaterial({ color: 0xb41eff, metalness: 0.9, roughness: 0.15, emissive: 0x1e0f2f, emissiveIntensity: 0.9 });
+      const shackle = new THREE.Mesh(shackleGeometry, shackleMaterial);
+      shackle.rotation.z = Math.PI;
+      shackle.position.y = 0.5;
+      lockGroup.add(shackle);
+
+      lockGroup.position.set(0, 0.6, 0.5);
+      group.add(lockGroup);
+
+      const particlesGeometry = new THREE.BufferGeometry();
+      const particlesCount = 400;
+      const positions = new Float32Array(particlesCount * 3);
+      for (let i = 0; i < particlesCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 8;
+        positions[i * 3 + 1] = Math.random() * 4;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 8;
+      }
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const particlesMaterial = new THREE.PointsMaterial({ color: 0x1ef2ff, size: 0.05, transparent: true, opacity: 0.7 });
+      const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particles);
+
+      const resizeRenderer = () => {
+        const width = canvas.clientWidth;
+        const height = canvas.clientHeight;
+        if (canvas.width !== width || canvas.height !== height) {
+          renderer.setSize(width, height, false);
+          camera.aspect = width / height;
+          camera.updateProjectionMatrix();
+        }
+      };
+
+      const clock = new THREE.Clock();
+      const animate = () => {
+        requestAnimationFrame(animate);
+        resizeRenderer();
+        const elapsed = clock.getElapsedTime();
+        group.rotation.y = elapsed * 0.35;
+        group.position.y = Math.sin(elapsed * 1.2) * 0.1;
+        particles.rotation.y = elapsed * 0.1;
+        renderer.render(scene, camera);
+      };
+
+      animate();
+    });
+  </script>
+</body>
+</html>
