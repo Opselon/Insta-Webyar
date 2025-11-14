@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title">
+  <title>Neshan</title>
+  <defs>
+    <linearGradient id="neshanGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="48" rx="12" fill="url(#neshanGradient)" />
+  <g transform="translate(20,12)" fill="#f8fafc">
+    <path d="M8 0h8l12 12v12h-8L8 12z" opacity="0.8" />
+    <circle cx="48" cy="12" r="12" fill="#38f8c3" />
+    <path d="M72 0h8v24h-8z" />
+    <path d="M88 0h8l8 12-8 12h-8l8-12z" opacity="0.8" />
+  </g>
+</svg>
