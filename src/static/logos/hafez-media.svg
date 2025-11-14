@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title">
+  <title>Hafez Media</title>
+  <rect width="160" height="48" rx="12" fill="#78350f" />
+  <g transform="translate(20,10)" fill="#ffedd5">
+    <path d="M0 28L14 0l14 28H16l-2.5-5h-9z" />
+    <path d="M48 0h14l-7 14 7 14H48l-7-14z" opacity="0.85" />
+    <circle cx="92" cy="14" r="14" fill="#f97316" opacity="0.85" />
+    <rect x="120" y="0" width="12" height="28" rx="6" />
+  </g>
+</svg>

@@ -85,17 +85,49 @@
       "Adaptive layouts respond to every device width and input type",
       "Curated palette system with instant light / dark parity",
       "Collaboration timeline with contextual voice notes"
-    ]
+    ],
+    "media": {
+      "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      "href": "https://unsplash.com/photos/U3sOwViXhkY",
+      "alt": "Creative marketing team collaborating around a laptop and camera equipment",
+      "caption": "Teams rely on Insta-Webyar dashboards to storyboard polished Instagram campaigns.",
+      "width": 1200,
+      "height": 800
+    }
   },
   "trustbar": {
     "title": "Trusted by experience-led teams",
     "logos": [
-      "Neshan",
-      "Quantic Labs",
-      "Karvan",
-      "Hafez Media",
-      "Studio Simorgh",
-      "Nova Growth"
+      {
+        "name": "Neshan",
+        "src": "/assets/logos/neshan.svg",
+        "href": "https://neshan.org/"
+      },
+      {
+        "name": "Quantic Labs",
+        "src": "/assets/logos/quantic-labs.svg",
+        "href": "https://quanticlabs.co/"
+      },
+      {
+        "name": "Karvan",
+        "src": "/assets/logos/karvan.svg",
+        "href": "https://karvan.com/"
+      },
+      {
+        "name": "Hafez Media",
+        "src": "/assets/logos/hafez-media.svg",
+        "href": "https://hafezmedia.com/"
+      },
+      {
+        "name": "Studio Simorgh",
+        "src": "/assets/logos/studio-simorgh.svg",
+        "href": "https://studiosimorgh.com/"
+      },
+      {
+        "name": "Nova Growth",
+        "src": "/assets/logos/nova-growth.svg",
+        "href": "https://novagrowth.io/"
+      }
     ]
   },
   "features": {

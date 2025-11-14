@@ -85,16 +85,49 @@
       "پشتیبانی کامل از فارسی و RTL",
       "امکان اشتراک گذاری فوری در شبکه اجتماعی",
       "توکن‌های طراحی پیشرفته برای تیم‌های حرفه‌ای"
-    ]
+    ],
+    "media": {
+      "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      "href": "https://unsplash.com/photos/U3sOwViXhkY",
+      "alt": "تیم بازاریابی در حال همکاری روی لپ‌تاپ و تجهیزات تصویربرداری",
+      "caption": "داشبوردهای Insta-Webyar برنامه‌ریزی کمپین‌های اینستاگرام را یکپارچه می‌کند.",
+      "width": 1200,
+      "height": 800
+    }
   },
   "trustbar": {
     "title": "مورد اعتماد برندهای پیشرو",
     "logos": [
-      "Avina",
-      "Tehran Studio",
-      "Mizban",
-      "Hamrah",
-      "Radman"
+      {
+        "name": "Neshan",
+        "src": "/assets/logos/neshan.svg",
+        "href": "https://neshan.org/"
+      },
+      {
+        "name": "Quantic Labs",
+        "src": "/assets/logos/quantic-labs.svg",
+        "href": "https://quanticlabs.co/"
+      },
+      {
+        "name": "Karvan",
+        "src": "/assets/logos/karvan.svg",
+        "href": "https://karvan.com/"
+      },
+      {
+        "name": "Hafez Media",
+        "src": "/assets/logos/hafez-media.svg",
+        "href": "https://hafezmedia.com/"
+      },
+      {
+        "name": "Studio Simorgh",
+        "src": "/assets/logos/studio-simorgh.svg",
+        "href": "https://studiosimorgh.com/"
+      },
+      {
+        "name": "Nova Growth",
+        "src": "/assets/logos/nova-growth.svg",
+        "href": "https://novagrowth.io/"
+      }
     ]
   },
   "features": {

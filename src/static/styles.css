@@ -341,6 +341,31 @@ a:focus {
   box-shadow: var(--shadow-soft);
   display: grid;
   align-items: start;
+  gap: 1.5rem;
+}
+
+.hero-media {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hero-media a {
+  display: block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.hero-media figcaption {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
 }
 
 .hero-metrics {
@@ -392,11 +417,32 @@ a:focus {
 }
 
 .trustbar li {
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-soft);
-  opacity: 0.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trustbar a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.trustbar a:hover,
+.trustbar a:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.trustbar img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1);
+  opacity: 0.8;
 }
 
 .section {
