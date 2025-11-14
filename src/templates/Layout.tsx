@@ -37,6 +37,35 @@ const HeroMetrics: FC<{ metrics: AppContent['hero']['metrics'] }> = ({ metrics }
   </dl>
 );
 
+const HeroMedia: FC<{ media?: AppContent['hero']['media'] }> = ({ media }) => {
+  if (!media) {
+    return null;
+  }
+
+  const image = (
+    <img
+      src={media.src}
+      alt={media.alt}
+      loading="lazy"
+      width={media.width ?? 640}
+      height={media.height ?? 426}
+    />
+  );
+
+  return (
+    <figure class="hero-media">
+      {media.href ? (
+        <a href={media.href} target="_blank" rel="noreferrer">
+          {image}
+        </a>
+      ) : (
+        image
+      )}
+      {media.caption && <figcaption>{media.caption}</figcaption>}
+    </figure>
+  );
+};
+
 const HeroHighlights: FC<{ highlights: AppContent['hero']['highlights'] }> = ({ highlights }) => (
   <ul class="hero-highlights">
     {highlights.map((highlight) => (
@@ -46,12 +75,20 @@ const HeroHighlights: FC<{ highlights: AppContent['hero']['highlights'] }> = ({ 
 );
 
 const TrustBar: FC<{ trustbar: AppContent['trustbar'] }> = ({ trustbar }) => (
-  <section class="trustbar" aria-label="Trusted by logos">
+  <section class="trustbar" aria-label="Trusted by partner brands">
     <div class="container">
       <h2>{trustbar.title}</h2>
       <ul>
         {trustbar.logos.map((logo) => (
-          <li>{logo}</li>
+          <li>
+            {logo.href ? (
+              <a href={logo.href} target="_blank" rel="noreferrer">
+                <img src={logo.src} alt={logo.name} loading="lazy" />
+              </a>
+            ) : (
+              <img src={logo.src} alt={logo.name} loading="lazy" />
+            )}
+          </li>
         ))}
       </ul>
     </div>
@@ -420,7 +457,8 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
               </div>
               <HeroHighlights highlights={content.hero.highlights} />
             </div>
-            <div class="hero__aside">
+          <div class="hero__aside">
+              <HeroMedia media={content.hero.media} />
               <HeroMetrics metrics={content.hero.metrics} />
             </div>
           </div>
