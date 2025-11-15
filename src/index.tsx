@@ -21,24 +21,6 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 const availableLocales = getAvailableLocales();
 
-app.on(['GET', 'HEAD'], '/assets/*', async (c) => {
-  const assetResponse = await c.env.ASSETS.fetch(c.req.raw);
-
-  if (assetResponse.status === 404) {
-    return c.notFound();
-  }
-
-  const headers = new Headers(assetResponse.headers);
-  if (!headers.has('cache-control')) {
-    headers.set('cache-control', 'public, max-age=604800, immutable');
-  }
-
-  return new Response(assetResponse.body, {
-    status: assetResponse.status,
-    headers
-  });
-});
-
 app.use('*', jsxRenderer());
 
 const fallbackOrigin = 'https://imen.webyar.cloud/';
