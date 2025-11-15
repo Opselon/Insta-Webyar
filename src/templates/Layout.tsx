@@ -2,6 +2,10 @@ import type { FC } from 'hono/jsx';
 import type { AppContent } from '../utils/i18n';
 import { ThemeScript, ThemeToggle } from './ThemeToggle';
 
+const LazySectionsScript = () => (
+  <script type="module" src="/assets/progressive-sections.js"></script>
+);
+
 const AnnouncementBar: FC<{ announcement: AppContent['announcement'] }> = ({ announcement }) => (
   <div class="announcement" role="region" aria-label="Product update">
     <div class="container announcement__inner">
@@ -37,6 +41,35 @@ const HeroMetrics: FC<{ metrics: AppContent['hero']['metrics'] }> = ({ metrics }
   </dl>
 );
 
+const HeroMedia: FC<{ media?: AppContent['hero']['media'] }> = ({ media }) => {
+  if (!media) {
+    return null;
+  }
+
+  const image = (
+    <img
+      src={media.src}
+      alt={media.alt}
+      loading="lazy"
+      width={media.width ?? 640}
+      height={media.height ?? 426}
+    />
+  );
+
+  return (
+    <figure class="hero-media">
+      {media.href ? (
+        <a href={media.href} target="_blank" rel="noreferrer">
+          {image}
+        </a>
+      ) : (
+        image
+      )}
+      {media.caption && <figcaption>{media.caption}</figcaption>}
+    </figure>
+  );
+};
+
 const HeroHighlights: FC<{ highlights: AppContent['hero']['highlights'] }> = ({ highlights }) => (
   <ul class="hero-highlights">
     {highlights.map((highlight) => (
@@ -46,12 +79,24 @@ const HeroHighlights: FC<{ highlights: AppContent['hero']['highlights'] }> = ({ 
 );
 
 const TrustBar: FC<{ trustbar: AppContent['trustbar'] }> = ({ trustbar }) => (
-  <section class="trustbar" aria-label="Trusted by logos">
+  <section
+    class="trustbar"
+    aria-label="Trusted by partner brands"
+    data-lazy-section
+  >
     <div class="container">
       <h2>{trustbar.title}</h2>
       <ul>
         {trustbar.logos.map((logo) => (
-          <li>{logo}</li>
+          <li>
+            {logo.href ? (
+              <a href={logo.href} target="_blank" rel="noreferrer">
+                <img src={logo.src} alt={logo.name} loading="lazy" />
+              </a>
+            ) : (
+              <img src={logo.src} alt={logo.name} loading="lazy" />
+            )}
+          </li>
         ))}
       </ul>
     </div>
@@ -110,7 +155,7 @@ const ExperienceCards: FC<{ cards: AppContent['experience']['cards'] }> = ({ car
 );
 
 const WorkflowSteps: FC<{ workflow: AppContent['workflow'] }> = ({ workflow }) => (
-  <section id="workflow" class="section section--workflow">
+  <section id="workflow" class="section section--workflow" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{workflow.title}</h2>
@@ -136,7 +181,7 @@ const WorkflowSteps: FC<{ workflow: AppContent['workflow'] }> = ({ workflow }) =
 );
 
 const AnalyticsCards: FC<{ analytics: AppContent['analytics'] }> = ({ analytics }) => (
-  <section id="analytics" class="section section--accent">
+  <section id="analytics" class="section section--accent" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{analytics.title}</h2>
@@ -154,8 +199,239 @@ const AnalyticsCards: FC<{ analytics: AppContent['analytics'] }> = ({ analytics 
   </section>
 );
 
+const ShowcaseGallery: FC<{ showcase: AppContent['showcase'] }> = ({ showcase }) => (
+  <section id="showcase" class="section section--showcase" data-lazy-section>
+    <div class="container">
+      <header class="section__header">
+        <h2>{showcase.title}</h2>
+        <p class="section__subtitle">{showcase.subtitle}</p>
+      </header>
+      <div class="showcase-grid">
+        {showcase.gallery.map((item) => {
+          const media = (
+            <figure class="showcase-card__media">
+              <img
+                src={item.image}
+                alt={item.alt}
+                loading="lazy"
+                width={item.width ?? 720}
+                height={item.height ?? 480}
+                data-lazy-media
+              />
+              {item.caption && <figcaption>{item.caption}</figcaption>}
+            </figure>
+          );
+
+          return (
+            <article class="showcase-card">
+              {item.href ? (
+                <a href={item.href} target="_blank" rel="noreferrer">
+                  {media}
+                </a>
+              ) : (
+                media
+              )}
+              <div class="showcase-card__body">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {showcase.cta && (
+        <div class="showcase-cta">
+          <a class="button button--ghost" href={showcase.cta.href}>
+            {showcase.cta.label}
+          </a>
+        </div>
+      )}
+    </div>
+  </section>
+);
+
+const BlueprintTimeline: FC<{ blueprints: AppContent['blueprints'] }> = ({ blueprints }) => (
+  <section id="blueprints" class="section section--blueprints" data-lazy-section>
+    <div class="container">
+      <header class="section__header">
+        <h2>{blueprints.title}</h2>
+        <p class="section__subtitle">{blueprints.subtitle}</p>
+      </header>
+      <ol class="blueprint-timeline">
+        {blueprints.steps.map((step, index) => (
+          <li class="blueprint-step">
+            <div class="blueprint-step__index" aria-hidden="true">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+            <div class="blueprint-step__body">
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+              <ul class="blueprint-step__points">
+                {step.points.map((point) => (
+                  <li>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <a class="button button--ghost" href={blueprints.cta.href}>
+        {blueprints.cta.label}
+      </a>
+    </div>
+  </section>
+);
+
+const PlaygroundSection: FC<{ playground: AppContent['playground'] }> = ({ playground }) => (
+  <section id="playground" class="section section--playground" data-lazy-section>
+    <div class="container section--playground__inner">
+      <div class="playground__copy">
+        <header class="section__header">
+          <h2>{playground.title}</h2>
+          <p class="section__subtitle">{playground.subtitle}</p>
+        </header>
+        <div class="playground-grid">
+          {playground.actions.map((action) => (
+            <a class="playground-card" href={action.href}>
+              <span class="playground-card__icon" aria-hidden="true">
+                {action.icon}
+              </span>
+              <div>
+                <h3>{action.title}</h3>
+                <p>{action.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+      {playground.preview && (
+        <figure class="playground-preview">
+          <img
+            src={playground.preview.image}
+            alt={playground.preview.alt}
+            loading="lazy"
+            width={playground.preview.width ?? 960}
+            height={playground.preview.height ?? 540}
+            data-lazy-media
+          />
+          {playground.preview.caption && (
+            <figcaption>{playground.preview.caption}</figcaption>
+          )}
+        </figure>
+      )}
+    </div>
+  </section>
+);
+
+const LocalizationMatrix: FC<{ localization: AppContent['localization'] }> = ({ localization }) => (
+  <section id="localization" class="section section--localization" data-lazy-section>
+    <div class="container">
+      <header class="section__header">
+        <h2>{localization.title}</h2>
+        <p class="section__subtitle">{localization.subtitle}</p>
+      </header>
+      <div class="localization-grid">
+        {localization.locales.map((locale) => (
+          <article class="localization-card">
+            <header>
+              <h3>{locale.name}</h3>
+              <span class="localization-card__code">{locale.code}</span>
+            </header>
+            <p>{locale.description}</p>
+            <p class="localization-card__audience">{locale.audience}</p>
+          </article>
+        ))}
+      </div>
+      <a class="button button--ghost" href={localization.cta.href}>
+        {localization.cta.label}
+      </a>
+    </div>
+  </section>
+);
+
+const IntegrationsShowcase: FC<{ integrations: AppContent['integrations'] }> = ({ integrations }) => (
+  <section id="integrations" class="section section--integrations" data-lazy-section>
+    <div class="container">
+      <header class="section__header">
+        <h2>{integrations.title}</h2>
+        <p class="section__subtitle">{integrations.subtitle}</p>
+      </header>
+      <div class="integrations-grid">
+        {integrations.categories.map((category) => (
+          <article class="integration-card">
+            <header>
+              <h3>{category.title}</h3>
+              <p>{category.description}</p>
+            </header>
+            <ul class="integration-logos">
+              {category.logos.map((logo) => (
+                <li>
+                  <a href={logo.href} target="_blank" rel="noreferrer">
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      loading="lazy"
+                      width={logo.width ?? 72}
+                      height={logo.height ?? 72}
+                      data-lazy-media
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <a class="button" href={integrations.cta.href}>
+        {integrations.cta.label}
+      </a>
+    </div>
+  </section>
+);
+
+const CommunitySpotlight: FC<{ community: AppContent['community'] }> = ({ community }) => (
+  <section id="community" class="section section--community" data-lazy-section>
+    <div class="container community-layout">
+      <div class="community-intro">
+        <header class="section__header">
+          <h2>{community.title}</h2>
+          <p class="section__subtitle">{community.subtitle}</p>
+        </header>
+        <div class="community-stats">
+          {community.stats.map((stat) => (
+            <div class="community-stat">
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="community-feed">
+        {community.highlights.map((highlight) => (
+          <article class="community-card">
+            <h3>{highlight.title}</h3>
+            <p>{highlight.summary}</p>
+            <a href={highlight.href}>{highlight.cta}</a>
+          </article>
+        ))}
+      </div>
+      <aside class="community-testimonials">
+        {community.testimonials.map((testimonial) => (
+          <figure class="community-testimonial">
+            <blockquote>“{testimonial.quote}”</blockquote>
+            <figcaption>
+              <strong>{testimonial.author}</strong>
+              <span>{testimonial.role}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </aside>
+    </div>
+  </section>
+);
+
 const CaseStudies: FC<{ caseStudies: AppContent['caseStudies'] }> = ({ caseStudies }) => (
-  <section id="case-studies" class="section section--muted">
+  <section id="case-studies" class="section section--muted" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{caseStudies.title}</h2>
@@ -175,7 +451,7 @@ const CaseStudies: FC<{ caseStudies: AppContent['caseStudies'] }> = ({ caseStudi
 );
 
 const Testimonials: FC<{ testimonials: AppContent['testimonials'] }> = ({ testimonials }) => (
-  <section id="testimonials" class="section section--testimonials">
+  <section id="testimonials" class="section section--testimonials" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{testimonials.title}</h2>
@@ -196,7 +472,7 @@ const Testimonials: FC<{ testimonials: AppContent['testimonials'] }> = ({ testim
 );
 
 const Pricing: FC<{ pricing: AppContent['pricing'] }> = ({ pricing }) => (
-  <section id="pricing" class="section section--pricing">
+  <section id="pricing" class="section section--pricing" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{pricing.title}</h2>
@@ -227,7 +503,7 @@ const Pricing: FC<{ pricing: AppContent['pricing'] }> = ({ pricing }) => (
 );
 
 const FAQ: FC<{ faq: AppContent['faq'] }> = ({ faq }) => (
-  <section id="faq" class="section section--faq">
+  <section id="faq" class="section section--faq" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{faq.title}</h2>
@@ -245,7 +521,7 @@ const FAQ: FC<{ faq: AppContent['faq'] }> = ({ faq }) => (
 );
 
 const Blog: FC<{ blog: AppContent['blog'] }> = ({ blog }) => (
-  <section id="blog" class="section section--blog">
+  <section id="blog" class="section section--blog" data-lazy-section>
     <div class="container">
       <header class="section__header">
         <h2>{blog.title}</h2>
@@ -264,7 +540,7 @@ const Blog: FC<{ blog: AppContent['blog'] }> = ({ blog }) => (
 );
 
 const CTA: FC<{ cta: AppContent['cta'] }> = ({ cta }) => (
-  <section class="section section--cta">
+  <section class="section section--cta" data-lazy-section>
     <div class="container section--cta__inner">
       <div class="cta__copy">
         <h2>{cta.title}</h2>
@@ -332,7 +608,7 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
   const direction = meta.direction ?? (htmlLang === 'fa' || htmlLang === 'ar' ? 'rtl' : 'ltr');
 
   return (
-    <html lang={htmlLang} dir={direction} data-theme="light" class="theme--light">
+    <html lang={htmlLang} dir={direction} data-theme="light" class="theme--light no-js">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -420,7 +696,8 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
               </div>
               <HeroHighlights highlights={content.hero.highlights} />
             </div>
-            <div class="hero__aside">
+          <div class="hero__aside">
+              <HeroMedia media={content.hero.media} />
               <HeroMetrics metrics={content.hero.metrics} />
             </div>
           </div>
@@ -428,7 +705,11 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
 
         <TrustBar trustbar={content.trustbar} />
 
-        <section id="features" class="section section--features">
+        <section
+          id="features"
+          class="section section--features"
+          data-lazy-section
+        >
           <div class="container">
             <header class="section__header">
               <h2>{content.features.title}</h2>
@@ -442,7 +723,11 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
           </div>
         </section>
 
-        <section id="experience" class="section section--experience">
+        <section
+          id="experience"
+          class="section section--experience"
+          data-lazy-section
+        >
           <div class="container">
             <header class="section__header">
               <h2>{content.experience.title}</h2>
@@ -456,6 +741,18 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
         <WorkflowSteps workflow={content.workflow} />
 
         <AnalyticsCards analytics={content.analytics} />
+
+        <ShowcaseGallery showcase={content.showcase} />
+
+        <BlueprintTimeline blueprints={content.blueprints} />
+
+        <PlaygroundSection playground={content.playground} />
+
+        <LocalizationMatrix localization={content.localization} />
+
+        <IntegrationsShowcase integrations={content.integrations} />
+
+        <CommunitySpotlight community={content.community} />
 
         <CaseStudies caseStudies={content.caseStudies} />
 
@@ -473,6 +770,7 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
       <Footer footer={content.footer} />
 
         <script type="module" src="/assets/theme-toggle.js"></script>
+        <LazySectionsScript />
       </body>
     </html>
   );

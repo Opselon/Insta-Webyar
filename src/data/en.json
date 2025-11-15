@@ -27,7 +27,7 @@
   "announcement": {
     "label": "Spring release",
     "message": "Introducing motion presets, AI captions in 32 languages, and real-time collaboration.",
-    "href": "#changelog"
+    "href": "#community"
   },
   "navigation": [
     {
@@ -43,12 +43,20 @@
       "href": "#experience"
     },
     {
-      "label": "Insights",
-      "href": "#analytics"
+      "label": "Workflow",
+      "href": "#workflow"
     },
     {
-      "label": "Resources",
-      "href": "#blog"
+      "label": "Showcase",
+      "href": "#showcase"
+    },
+    {
+      "label": "Blueprints",
+      "href": "#blueprints"
+    },
+    {
+      "label": "Integrations",
+      "href": "#integrations"
     },
     {
       "label": "Pricing",
@@ -61,11 +69,11 @@
     "description": "The official Insta-Webyar theme combines Vazirmatn typography, cinematic motion, and AI-assisted writing so your brand looks premium across light and dark modes.",
     "primaryAction": {
       "label": "Start free trial",
-      "href": "#pricing"
+      "href": "#playground"
     },
     "secondaryAction": {
       "label": "Browse template library",
-      "href": "#features"
+      "href": "#showcase"
     },
     "metrics": [
       {
@@ -85,17 +93,49 @@
       "Adaptive layouts respond to every device width and input type",
       "Curated palette system with instant light / dark parity",
       "Collaboration timeline with contextual voice notes"
-    ]
+    ],
+    "media": {
+      "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      "href": "https://unsplash.com/photos/U3sOwViXhkY",
+      "alt": "Creative marketing team collaborating around a laptop and camera equipment",
+      "caption": "Teams rely on Insta-Webyar dashboards to storyboard polished Instagram campaigns.",
+      "width": 1200,
+      "height": 800
+    }
   },
   "trustbar": {
     "title": "Trusted by experience-led teams",
     "logos": [
-      "Neshan",
-      "Quantic Labs",
-      "Karvan",
-      "Hafez Media",
-      "Studio Simorgh",
-      "Nova Growth"
+      {
+        "name": "Neshan",
+        "src": "/assets/logos/neshan.svg",
+        "href": "https://neshan.org/"
+      },
+      {
+        "name": "Quantic Labs",
+        "src": "/assets/logos/quantic-labs.svg",
+        "href": "https://quanticlabs.co/"
+      },
+      {
+        "name": "Karvan",
+        "src": "/assets/logos/karvan.svg",
+        "href": "https://karvan.com/"
+      },
+      {
+        "name": "Hafez Media",
+        "src": "/assets/logos/hafez-media.svg",
+        "href": "https://hafezmedia.com/"
+      },
+      {
+        "name": "Studio Simorgh",
+        "src": "/assets/logos/studio-simorgh.svg",
+        "href": "https://studiosimorgh.com/"
+      },
+      {
+        "name": "Nova Growth",
+        "src": "/assets/logos/nova-growth.svg",
+        "href": "https://novagrowth.io/"
+      }
     ]
   },
   "features": {
@@ -226,7 +266,7 @@
     ],
     "cta": {
       "label": "View automation recipes",
-      "href": "#automation"
+      "href": "#blueprints"
     }
   },
   "analytics": {
@@ -244,6 +284,271 @@
       {
         "title": "Team operations",
         "description": "Track review cycles, production velocity, and utilization to keep teams aligned."
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Show, don't tell with cinematic mockups",
+    "subtitle": "Preview the official Insta-Webyar layout engine across mobile, tablet, and desktop canvases.",
+    "gallery": [
+      {
+        "title": "Storyboard orchestrated in Figma",
+        "description": "Review light and dark exports side-by-side before sending stakeholder previews.",
+        "image": "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Design leads collaborating on a laptop during a planning session",
+        "href": "https://www.pexels.com/photo/two-women-talking-while-looking-at-the-laptop-3182773/",
+        "caption": "Real teams map the creative journey inside Insta-Webyar's shared canvas.",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "title": "Light and dark motion frames",
+        "description": "Audit contrast, captions, and motion timing in synchronized themes without duplicating work.",
+        "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Creative strategists reviewing campaign frames on a large display wall",
+        "href": "https://www.pexels.com/photo/photo-of-people-having-meeting-3861969/",
+        "caption": "Motion tokens stay in lockstep across every breakpoint.",
+        "width": 1200,
+        "height": 800
+      },
+      {
+        "title": "Analytics-driven art direction",
+        "description": "Pair performance insights with creative adjustments and publish instantly from one surface.",
+        "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Marketing analyst presenting insights on a tablet to a teammate",
+        "href": "https://www.pexels.com/photo/man-in-blue-suit-sitting-3184291/",
+        "caption": "Insights dashboards sit beside your creative sandbox for rapid iteration.",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "cta": {
+      "label": "Explore the full gallery",
+      "href": "https://www.behance.net/search/projects?search=instagram%20story%20design"
+    }
+  },
+  "blueprints": {
+    "title": "Blueprints for every campaign ritual",
+    "subtitle": "Follow proven frameworks curated by the Insta-Webyar product team.",
+    "steps": [
+      {
+        "title": "Kickoff with purpose-built briefings",
+        "description": "Capture objectives, tone, and audiences in minutes with AI-assisted intake forms.",
+        "points": [
+          "Brand voice guardrails automatically apply to every scene",
+          "Dynamic asset requests keep producers unblocked",
+          "Auto-sync requirements into Jira, Linear, or Notion"
+        ]
+      },
+      {
+        "title": "Craft modular narrative arcs",
+        "description": "Remix ready-made arcs for launches, drops, and evergreen storytelling.",
+        "points": [
+          "Guided beat sheets tie visuals back to campaign goals",
+          "Accessibility checkpoints prevent last-minute rework",
+          "Smart variants target personas without duplicating work"
+        ]
+      },
+      {
+        "title": "Measure, learn, and relaunch",
+        "description": "Rally teams around real-time dashboards and automate follow-up experiments.",
+        "points": [
+          "AI summaries capture what resonated in each market",
+          "Notifies owners when fresh creative is recommended",
+          "Exports stakeholder-ready decks in a single click"
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Download blueprint pack",
+      "href": "https://insta-webyar.com/blueprints.pdf"
+    }
+  },
+  "playground": {
+    "title": "Experiment in the campaign playground",
+    "subtitle": "Spin up a safe space to prototype stories, animations, and automation without touching production data.",
+    "actions": [
+      {
+        "icon": "⚡",
+        "title": "Spin up a launch room",
+        "description": "Generate a pre-built workspace with assets, tasks, and deadlines tailored to your brief.",
+        "href": "#book"
+      },
+      {
+        "icon": "🖌️",
+        "title": "Design with live tokens",
+        "description": "Test palette swaps, typography scales, and grid updates against real content.",
+        "href": "https://insta-webyar.com/playground/design"
+      },
+      {
+        "icon": "📊",
+        "title": "Simulate engagement",
+        "description": "Forecast taps, holds, and swipe-aways with historical benchmarks.",
+        "href": "https://insta-webyar.com/playground/analytics"
+      }
+    ],
+    "preview": {
+      "image": "https://images.pexels.com/photos/3184631/pexels-photo-3184631.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "alt": "Creative technologist reviewing an interactive storyboard on a large monitor",
+      "caption": "Prototype advanced animations and collaboration rituals before rolling them out to your team.",
+      "width": 1200,
+      "height": 800
+    }
+  },
+  "localization": {
+    "title": "Localization without compromise",
+    "subtitle": "Ship culturally-resonant stories with built-in RTL support, automated translation, and accessibility checks.",
+    "locales": [
+      {
+        "name": "فارسی (Farsi)",
+        "code": "fa-IR",
+        "description": "Typographic rhythm optimized for Vazirmatn with ligature-aware kerning.",
+        "audience": "Ideal for Iran-first product launches and cultural campaigns."
+      },
+      {
+        "name": "English",
+        "code": "en-US",
+        "description": "North American presets with channel-specific CTA packs and compliance notes.",
+        "audience": "Perfect for global teams balancing US, UK, and ANZ markets."
+      },
+      {
+        "name": "العربية",
+        "code": "ar-AE",
+        "description": "RTL layout optimizations with localized sticker sets and calendar alignment.",
+        "audience": "Craft premium experiences for GCC lifestyle brands."
+      },
+      {
+        "name": "Türkçe",
+        "code": "tr-TR",
+        "description": "Localized motion tokens and partnership-ready hashtag suggestions.",
+        "audience": "Launch region-specific promos across Türkiye and diaspora audiences."
+      }
+    ],
+    "cta": {
+      "label": "View localization guidelines",
+      "href": "https://insta-webyar.com/localization"
+    }
+  },
+  "integrations": {
+    "title": "Connect your existing stack",
+    "subtitle": "Bring design systems, asset libraries, and automation workflows into Insta-Webyar with one-click connectors.",
+    "categories": [
+      {
+        "title": "Design systems",
+        "description": "Sync tokens, components, and comments from your favorite creation tools.",
+        "logos": [
+          {
+            "name": "Figma",
+            "src": "https://cdn.simpleicons.org/figma/6366f1",
+            "href": "https://www.figma.com/"
+          },
+          {
+            "name": "Adobe Creative Cloud",
+            "src": "https://cdn.simpleicons.org/adobecreativecloud/DA1F26",
+            "href": "https://www.adobe.com/creativecloud.html"
+          },
+          {
+            "name": "Sketch",
+            "src": "https://cdn.simpleicons.org/sketch/F7B500",
+            "href": "https://www.sketch.com/"
+          }
+        ]
+      },
+      {
+        "title": "Knowledge hubs",
+        "description": "Keep briefs, rituals, and campaign retros in sync with your source of truth.",
+        "logos": [
+          {
+            "name": "Notion",
+            "src": "https://cdn.simpleicons.org/notion/000000",
+            "href": "https://www.notion.so/"
+          },
+          {
+            "name": "Confluence",
+            "src": "https://cdn.simpleicons.org/confluence/0052CC",
+            "href": "https://www.atlassian.com/software/confluence"
+          },
+          {
+            "name": "Google Drive",
+            "src": "https://cdn.simpleicons.org/googledrive/4285F4",
+            "href": "https://drive.google.com/"
+          }
+        ]
+      },
+      {
+        "title": "Automation & ops",
+        "description": "Trigger workflows, sync approvals, and notify stakeholders automatically.",
+        "logos": [
+          {
+            "name": "Slack",
+            "src": "https://cdn.simpleicons.org/slack/36C5F0",
+            "href": "https://slack.com/"
+          },
+          {
+            "name": "Zapier",
+            "src": "https://cdn.simpleicons.org/zapier/FF4F00",
+            "href": "https://zapier.com/"
+          },
+          {
+            "name": "Linear",
+            "src": "https://cdn.simpleicons.org/linear/5E6AD2",
+            "href": "https://linear.app/"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Browse integration directory",
+      "href": "https://insta-webyar.com/integrations"
+    }
+  },
+  "community": {
+    "title": "Join the Insta-Webyar creator community",
+    "subtitle": "Level up your craft with live teardowns, async critiques, and access to the product roadmap.",
+    "stats": [
+      {
+        "value": "8k+",
+        "label": "Product makers"
+      },
+      {
+        "value": "320",
+        "label": "Monthly critiques"
+      },
+      {
+        "value": "42",
+        "label": "Regional chapters"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Weekly teardown club",
+        "summary": "Dissect high-performing stories with the design systems team and guest agencies.",
+        "href": "https://insta-webyar.com/events/teardown",
+        "cta": "Reserve a seat"
+      },
+      {
+        "title": "Async critique lounge",
+        "summary": "Share drafts, get timestamped feedback, and iterate with peers across time zones.",
+        "href": "https://community.insta-webyar.com/critique",
+        "cta": "Join the space"
+      },
+      {
+        "title": "Roadmap townhalls",
+        "summary": "Preview upcoming features, vote on priorities, and connect directly with the product crew.",
+        "href": "https://insta-webyar.com/events/roadmap",
+        "cta": "Save your spot"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "The community clinics helped us reinvent our story cadence in under a month.",
+        "author": "Layla Nazari",
+        "role": "Brand Experience Lead, Studio Khorshid"
+      },
+      {
+        "quote": "Roadmap townhalls make us feel like co-builders. Our requests land in product within weeks.",
+        "author": "Michael Reyes",
+        "role": "Head of Content, Crescent Labs"
       }
     ]
   },
@@ -371,7 +676,7 @@
     },
     "secondaryAction": {
       "label": "Download spec sheet",
-      "href": "#download"
+      "href": "https://insta-webyar.com/spec-sheet.pdf"
     }
   },
   "footer": {
@@ -382,12 +687,12 @@
         "href": "#features"
       },
       {
-        "label": "Security",
-        "href": "#security"
+        "label": "Showcase",
+        "href": "#showcase"
       },
       {
-        "label": "Status",
-        "href": "#status"
+        "label": "Community",
+        "href": "#community"
       }
     ],
     "columns": [
@@ -395,12 +700,12 @@
         "title": "Platform",
         "links": [
           {
-            "label": "Template library",
-            "href": "#features"
+            "label": "Workflow",
+            "href": "#workflow"
           },
           {
-            "label": "Automation",
-            "href": "#automation"
+            "label": "Blueprints",
+            "href": "#blueprints"
           },
           {
             "label": "Integrations",
@@ -417,11 +722,11 @@
           },
           {
             "label": "Careers",
-            "href": "#careers"
+            "href": "https://insta-webyar.com/careers"
           },
           {
             "label": "Press",
-            "href": "#press"
+            "href": "https://insta-webyar.com/press"
           }
         ]
       },
@@ -434,7 +739,7 @@
           },
           {
             "label": "Guides",
-            "href": "#guides"
+            "href": "https://insta-webyar.com/guides"
           },
           {
             "label": "Support",

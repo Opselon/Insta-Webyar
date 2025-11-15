@@ -1,11 +1,23 @@
 import { Hono } from 'hono';
 import { serveStatic } from 'hono/cloudflare-workers';
-import { defaultLocale, getContent } from './utils/i18n';
+import { jsxRenderer } from 'hono/jsx-renderer';
+import manifestJSON from '__STATIC_CONTENT_MANIFEST';
+
 import { Layout } from './templates/Layout';
+import { defaultLocale, getContent } from './utils/i18n';
 
 const app = new Hono();
 
-app.use('/assets/*', serveStatic({ root: './src/static' }));
+const staticContentManifest = JSON.parse(manifestJSON ?? '{}') as Record<string, string>;
+
+app.use(
+  '/assets/*',
+  serveStatic({
+    root: './',
+    manifest: staticContentManifest
+  })
+);
+app.use('*', jsxRenderer());
 
 const fallbackOrigin = 'https://insta-webyar.com/';
 
@@ -19,7 +31,7 @@ app.get('/', (c) => {
   const locale = queryLocale ?? headerLocale ?? defaultLocale;
   const content = getContent(locale);
 
-  return c.html(<Layout content={content} />);
+  return c.render(Layout({ content }));
 });
 
 app.get('/robots.txt', (c) => {
@@ -61,8 +73,15 @@ app.get('/sitemap.xml', (c) => {
 
   const lastmod = new Date().toISOString();
   const urlset = Array.from(urls)
-    .map(
-      (href) => `  <url>\n    <loc>${href}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`
+    .map((href) =>
+      [
+        '  <url>',
+        `    <loc>${href}</loc>`,
+        `    <lastmod>${lastmod}</lastmod>`,
+        '    <changefreq>weekly</changefreq>',
+        '    <priority>0.8</priority>',
+        '  </url>'
+      ].join('\n')
     )
     .join('\n');
 

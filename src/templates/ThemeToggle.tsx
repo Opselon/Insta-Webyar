@@ -6,6 +6,7 @@ export const ThemeScript: FC = () => (
       __html: `(() => {
   const storageKey = 'insta-webyar-theme';
   const root = document.documentElement;
+  root.classList.remove('no-js');
   const stored = localStorage.getItem(storageKey);
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const theme = stored || (prefersDark ? 'dark' : 'light');

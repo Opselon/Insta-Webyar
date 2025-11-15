@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title">
+  <title>Quantic Labs</title>
+  <rect width="160" height="48" rx="12" fill="#1e293b" />
+  <g transform="translate(20,10)" fill="none" stroke="#facc15" stroke-width="4" stroke-linecap="round">
+    <path d="M4 14c0-8 6-14 14-14s14 6 14 14-6 14-14 14" />
+    <path d="M52 0l12 28" />
+    <path d="M76 0v28" />
+    <path d="M100 28c-8 0-14-6-14-14S92 0 100 0s14 6 14 14-6 14-14 14z" />
+  </g>
+</svg>

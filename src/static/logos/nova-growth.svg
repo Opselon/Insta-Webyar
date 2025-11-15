@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title">
+  <title>Nova Growth</title>
+  <rect width="160" height="48" rx="12" fill="#111827" />
+  <g transform="translate(18,10)" fill="#a5f3fc">
+    <path d="M0 28L18 0l18 28H26l-8-12-8 12z" />
+    <path d="M60 28V0h12l12 20v8h-8V20l-8-12v20z" />
+    <path d="M104 0l18 14-18 14-18-14z" opacity="0.8" />
+    <rect x="128" y="4" width="12" height="20" rx="6" />
+  </g>
+</svg>
