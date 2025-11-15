@@ -8,7 +8,7 @@
     "start": "wrangler dev",
     "build": "wrangler deploy --dry-run",
     "deploy": "wrangler deploy",
-    "test": "wrangler deploy --dry-run --outdir dist && echo 'No automated tests yet.'"
+    "test": "node --test tests/polyweight/*.test.mjs && wrangler deploy --dry-run --outdir dist"
   },
   "dependencies": {
     "hono": "^4.5.6"

@@ -1,28 +1,64 @@
 import { Hono } from 'hono';
-import { serveStatic } from 'hono/cloudflare-workers';
 import { jsxRenderer } from 'hono/jsx-renderer';
 
 import { Layout } from './templates/Layout';
-import { defaultLocale, getContent } from './utils/i18n';
+import {
+  defaultLocale,
+  getAvailableLocales,
+  getContent,
+  resolveLocale
+} from './utils/i18n';
 
-const app = new Hono();
+type AssetFetcher = {
+  fetch: (request: Request) => Promise<Response>;
+};
 
-app.use('/assets/*', serveStatic({ root: './src/static' }));
+type Bindings = {
+  ASSETS: AssetFetcher;
+};
+
+const app = new Hono<{ Bindings: Bindings }>();
+
+const availableLocales = getAvailableLocales();
+
+app.on(['GET', 'HEAD'], '/assets/*', async (c) => {
+  const assetResponse = await c.env.ASSETS.fetch(c.req.raw);
+
+  if (assetResponse.status === 404) {
+    return c.notFound();
+  }
+
+  const headers = new Headers(assetResponse.headers);
+  if (!headers.has('cache-control')) {
+    headers.set('cache-control', 'public, max-age=604800, immutable');
+  }
+
+  return new Response(assetResponse.body, {
+    status: assetResponse.status,
+    headers
+  });
+});
+
 app.use('*', jsxRenderer());
 
-const fallbackOrigin = 'https://insta-webyar.com/';
+const fallbackOrigin = 'https://imen.webyar.cloud/';
 
 app.get('/', (c) => {
   const queryLocale = c.req.query('lang');
-  const headerLocale = c
-    .req
-    .header('Accept-Language')
-    ?.split(',')[0]
-    ?.split(';')[0];
-  const locale = queryLocale ?? headerLocale ?? defaultLocale;
+  const locale = resolveLocale(queryLocale ?? undefined);
+
+  if (queryLocale && locale !== queryLocale) {
+    const target = locale === defaultLocale ? '/' : `/?lang=${locale}`;
+    return c.redirect(target, 302);
+  }
+
+  if (queryLocale === defaultLocale) {
+    return c.redirect('/', 302);
+  }
+
   const content = getContent(locale);
 
-  return c.render(<Layout content={content} />);
+  return c.render(<Layout content={content} locale={locale} locales={availableLocales} />);
 });
 
 app.get('/robots.txt', (c) => {

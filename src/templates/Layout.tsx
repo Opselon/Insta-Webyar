@@ -1,5 +1,8 @@
 import type { FC } from 'hono/jsx';
 import type { AppContent } from '../utils/i18n';
+import { defaultLocale } from '../utils/i18n';
+import { renderIcon } from '../icons/IconRegistry';
+import { HeroScene } from './HeroScene';
 import { ThemeScript, ThemeToggle } from './ThemeToggle';
 
 const AnnouncementBar: FC<{ announcement: AppContent['announcement'] }> = ({ announcement }) => (
@@ -14,6 +17,11 @@ const AnnouncementBar: FC<{ announcement: AppContent['announcement'] }> = ({ ann
   </div>
 );
 
+const localeLabels: Record<string, string> = {
+  en: 'English',
+  fa: 'فارسی'
+};
+
 const Navigation: FC<{ items: AppContent['navigation'] }> = ({ items }) => (
   <nav class="site-nav" aria-label="Primary navigation">
     <ul>
@@ -22,6 +30,38 @@ const Navigation: FC<{ items: AppContent['navigation'] }> = ({ items }) => (
           <a href={item.href}>{item.label}</a>
         </li>
       ))}
+    </ul>
+  </nav>
+);
+
+const createLocaleHref = (locale: string): string =>
+  locale === defaultLocale ? '/' : `/?lang=${locale}`;
+
+const LanguageSwitcher: FC<{ currentLocale: string; locales: string[] }> = ({
+  currentLocale,
+  locales
+}) => (
+  <nav class="language-switcher" aria-label="Language selector">
+    <ul>
+      {locales.map((locale) => {
+        const label = localeLabels[locale] ?? locale.toUpperCase();
+        const isActive = locale === currentLocale;
+        return (
+          <li>
+            <a
+              href={createLocaleHref(locale)}
+              class={`language-switcher__link${
+                isActive ? ' language-switcher__link--active' : ''
+              }`}
+              aria-current={isActive ? 'true' : undefined}
+              hrefLang={locale}
+              lang={locale}
+            >
+              {label}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   </nav>
 );
@@ -105,7 +145,11 @@ const FeatureSection: FC<{ section: AppContent['features']['sections'][number] }
       {section.bullets.map((bullet) => (
         <li>
           <span class="feature-panel__icon" aria-hidden="true">
-            {bullet.icon}
+            {renderIcon(bullet.icon, undefined, 'feature-panel__icon-svg') ?? (
+              <span class="feature-panel__icon-fallback" aria-hidden="true">
+                {bullet.icon}
+              </span>
+            )}
           </span>
           <div>
             <strong>{bullet.title}</strong>
@@ -361,11 +405,15 @@ const Footer: FC<{ footer: AppContent['footer'] }> = ({ footer }) => {
   );
 };
 
-export const Layout: FC<{ content: AppContent }> = ({ content }) => {
+export const Layout: FC<{ content: AppContent; locale: string; locales: string[] }> = ({
+  content,
+  locale,
+  locales
+}) => {
   const { meta } = content;
   const keywords = meta.keywords?.join(', ');
 
-  const htmlLang = meta.lang ?? meta.locale?.split('_')[0] ?? 'en';
+  const htmlLang = meta.lang ?? locale ?? meta.locale?.split('_')[0] ?? defaultLocale;
   const direction = meta.direction ?? (htmlLang === 'fa' || htmlLang === 'ar' ? 'rtl' : 'ltr');
 
   return (
@@ -379,6 +427,15 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
         {meta.robots && <meta name="robots" content={meta.robots} />}
         {keywords && <meta name="keywords" content={keywords} />}
         {meta.canonical && <link rel="canonical" href={meta.canonical} />}
+        {locales.map((availableLocale) => {
+          const href =
+            availableLocale === locale
+              ? meta.canonical ?? createLocaleHref(availableLocale)
+              : createLocaleHref(availableLocale);
+          return (
+            <link rel="alternate" hrefLang={availableLocale} href={href} />
+          );
+        })}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
@@ -432,8 +489,9 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
           <a class="logo" href="#hero">Insta-Webyar</a>
           <Navigation items={content.navigation} />
           <div class="site-header__actions">
-            <a class="button button--ghost" href="#book">
-              Book demo
+            <LanguageSwitcher currentLocale={locale} locales={locales} />
+            <a class="button button--ghost" href={content.hero.primaryAction.href}>
+              {content.hero.primaryAction.label}
             </a>
             <ThemeToggle />
           </div>
@@ -457,7 +515,8 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
               </div>
               <HeroHighlights highlights={content.hero.highlights} />
             </div>
-          <div class="hero__aside">
+            <div class="hero__aside">
+              <HeroScene />
               <HeroMedia media={content.hero.media} />
               <HeroMetrics metrics={content.hero.metrics} />
             </div>
@@ -511,6 +570,7 @@ export const Layout: FC<{ content: AppContent }> = ({ content }) => {
       <Footer footer={content.footer} />
 
         <script type="module" src="/assets/theme-toggle.js"></script>
+        <script type="module" src="/assets/hero-scene.js" defer></script>
       </body>
     </html>
   );
