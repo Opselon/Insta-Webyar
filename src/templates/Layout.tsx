@@ -11,7 +11,7 @@ const AnnouncementBar: FC<{ announcement: AppContent['announcement'] }> = ({ ann
       <span class="announcement__label">{announcement.label}</span>
       <p class="announcement__message">{announcement.message}</p>
       <a class="announcement__link" href={announcement.href}>
-        View what's new
+        {announcement.cta ?? "View what's new"}
       </a>
     </div>
   </div>
@@ -114,11 +114,42 @@ const HeroHighlights: FC<{ highlights: AppContent['hero']['highlights'] }> = ({ 
   </ul>
 );
 
+const HeroShowcase: FC<{ hero: AppContent['hero'] }> = ({ hero }) => (
+  <section id="hero" class="hero" data-lazy-section>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow">{hero.eyebrow}</p>
+        <h1>{hero.title}</h1>
+        <p class="lead">{hero.description}</p>
+        <div class="hero__actions">
+          <a class="button" href={hero.primaryAction.href}>
+            {hero.primaryAction.label}
+          </a>
+          <a class="button button--ghost" href={hero.secondaryAction.href}>
+            {hero.secondaryAction.label}
+          </a>
+        </div>
+        <HeroHighlights highlights={hero.highlights} />
+        <div class="hero__footnotes">
+          {hero.footnotes?.map((note) => (
+            <p>{note}</p>
+          ))}
+        </div>
+      </div>
+      <div class="hero__aside">
+        <HeroScene />
+        <HeroMedia media={hero.media} />
+        <HeroMetrics metrics={hero.metrics} />
+      </div>
+    </div>
+  </section>
+);
+
 const TrustBar: FC<{ trustbar: AppContent['trustbar'] }> = ({ trustbar }) => (
   <section class="trustbar" aria-label="Trusted by partner brands">
     <div class="container">
       <h2>{trustbar.title}</h2>
-      <ul>
+      <ul data-lazy-grid>
         {trustbar.logos.map((logo) => (
           <li>
             {logo.href ? (
@@ -138,8 +169,10 @@ const TrustBar: FC<{ trustbar: AppContent['trustbar'] }> = ({ trustbar }) => (
 const FeatureSection: FC<{ section: AppContent['features']['sections'][number] }> = ({ section }) => (
   <article id={section.id} class="feature-panel">
     <div class="feature-panel__copy">
+      {section.ribbon && <span class="feature-panel__ribbon">{section.ribbon}</span>}
       <h3>{section.title}</h3>
       <p>{section.description}</p>
+      {section.meta && <p class="feature-panel__meta">{section.meta}</p>}
     </div>
     <ul class="feature-panel__bullets">
       {section.bullets.map((bullet) => (
@@ -158,13 +191,28 @@ const FeatureSection: FC<{ section: AppContent['features']['sections'][number] }
         </li>
       ))}
     </ul>
+    {section.media && (
+      <figure class="feature-panel__media">
+        <img
+          src={section.media.src}
+          alt={section.media.alt}
+          loading="lazy"
+          width={section.media.width ?? 720}
+          height={section.media.height ?? 520}
+        />
+        {section.media.caption && (
+          <figcaption>{section.media.caption}</figcaption>
+        )}
+      </figure>
+    )}
   </article>
 );
 
 const ExperiencePillars: FC<{ pillars: AppContent['experience']['pillars'] }> = ({ pillars }) => (
-  <ul class="experience-pillars">
+  <ul class="experience-pillars" data-lazy-grid>
     {pillars.map((pillar) => (
       <li>
+        <span class="experience-pillars__badge">{pillar.badge ?? '★'}</span>
         <h3>{pillar.title}</h3>
         <p>{pillar.description}</p>
       </li>
@@ -173,10 +221,14 @@ const ExperiencePillars: FC<{ pillars: AppContent['experience']['pillars'] }> = 
 );
 
 const ExperienceCards: FC<{ cards: AppContent['experience']['cards'] }> = ({ cards }) => (
-  <div class="experience-cards">
+  <div class="experience-cards" data-lazy-grid>
     {cards.map((card) => (
       <article class="experience-card">
         <header>
+          <div class="experience-card__meta">
+            <span class="experience-card__index">{card.index}</span>
+            <span class="experience-card__label">{card.label}</span>
+          </div>
           <h3>{card.title}</h3>
           <p>{card.description}</p>
         </header>
@@ -185,9 +237,156 @@ const ExperienceCards: FC<{ cards: AppContent['experience']['cards'] }> = ({ car
             <li>{point}</li>
           ))}
         </ul>
+        {card.metric && (
+          <p class="experience-card__metric" aria-label={card.metric.label}>
+            <strong>{card.metric.value}</strong>
+            <span>{card.metric.label}</span>
+          </p>
+        )}
       </article>
     ))}
   </div>
+);
+
+const Marquee: FC<{ marquee: AppContent['marquee'] }> = ({ marquee }) => (
+  <section id="marquee" class="section section--marquee" aria-label={marquee.title}>
+    <div class="container section__header section__header--center">
+      <p class="section__eyebrow">{marquee.title}</p>
+      <h2>{marquee.subtitle}</h2>
+      <p class="section__subtitle">{marquee.description}</p>
+    </div>
+    <div class="marquee" data-marquee>
+      <div class="marquee__track" data-marquee-track>
+        {marquee.ribbons.map((ribbon) => (
+          <span class="marquee__pill">{ribbon}</span>
+        ))}
+      </div>
+    </div>
+    <div class="marquee__metrics" data-lazy-grid>
+      {marquee.metrics.map((metric) => (
+        <dl>
+          <dt>{metric.label}</dt>
+          <dd>{metric.value}</dd>
+          <dd class="marquee__metric-description">{metric.description}</dd>
+        </dl>
+      ))}
+    </div>
+  </section>
+);
+
+const Blueprint: FC<{ blueprint: AppContent['blueprint'] }> = ({ blueprint }) => (
+  <section id="blueprint" class="section section--blueprint">
+    <div class="container">
+      <header class="section__header">
+        <p class="section__eyebrow">{blueprint.title}</p>
+        <h2>{blueprint.subtitle}</h2>
+        <p class="section__subtitle">{blueprint.description}</p>
+      </header>
+      <div class="blueprint-grid" data-lazy-grid>
+        {blueprint.layers.map((layer) => (
+          <article class="blueprint-card">
+            <header>
+              <span class={`blueprint-card__badge blueprint-card__badge--${layer.intent}`}>
+                {layer.intentLabel}
+              </span>
+              <h3>{layer.name}</h3>
+              <p>{layer.description}</p>
+            </header>
+            <ul>
+              {layer.capabilities.map((capability) => (
+                <li>{capability}</li>
+              ))}
+            </ul>
+            {layer.insight && <p class="blueprint-card__insight">{layer.insight}</p>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const InnovationGrid: FC<{ innovation: AppContent['innovation'] }> = ({ innovation }) => (
+  <section id="innovation" class="section section--innovation">
+    <div class="container">
+      <header class="section__header section__header--center">
+        <p class="section__eyebrow">{innovation.title}</p>
+        <h2>{innovation.subtitle}</h2>
+        <p class="section__subtitle">{innovation.description}</p>
+      </header>
+      <div class="innovation-grid" data-lazy-grid>
+        {innovation.columns.map((column) => (
+          <article class="innovation-card">
+            <h3>{column.title}</h3>
+            <p>{column.description}</p>
+            <ul>
+              {column.points.map((point) => (
+                <li>{point}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const Journey: FC<{ journey: AppContent['journey'] }> = ({ journey }) => (
+  <section id="journey" class="section section--journey">
+    <div class="container">
+      <header class="section__header">
+        <p class="section__eyebrow">{journey.title}</p>
+        <h2>{journey.subtitle}</h2>
+        <p class="section__subtitle">{journey.description}</p>
+      </header>
+      <ol class="journey" data-lazy-grid>
+        {journey.steps.map((step, index) => (
+          <li>
+            <div class="journey__index" aria-hidden="true">{index + 1}</div>
+            <div class="journey__content">
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+              <ul>
+                {step.details.map((detail) => (
+                  <li>{detail}</li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+);
+
+const StudioShowcase: FC<{ studio: AppContent['studio'] }> = ({ studio }) => (
+  <section id="studio" class="section section--studio">
+    <div class="container">
+      <header class="section__header section__header--split">
+        <div>
+          <p class="section__eyebrow">{studio.title}</p>
+          <h2>{studio.subtitle}</h2>
+        </div>
+        <p class="section__subtitle">{studio.description}</p>
+      </header>
+      <div class="studio-grid" data-lazy-grid>
+        {studio.cards.map((card) => (
+          <article class="studio-card">
+            <header>
+              <span class="studio-card__icon" aria-hidden="true">{card.icon}</span>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </header>
+            <ul>
+              {card.highlights.map((highlight) => (
+                <li>{highlight}</li>
+              ))}
+            </ul>
+            {card.badge && <span class="studio-card__badge">{card.badge}</span>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 );
 
 const WorkflowSteps: FC<{ workflow: AppContent['workflow'] }> = ({ workflow }) => (
@@ -196,7 +395,7 @@ const WorkflowSteps: FC<{ workflow: AppContent['workflow'] }> = ({ workflow }) =
       <header class="section__header">
         <h2>{workflow.title}</h2>
       </header>
-      <ol class="workflow">
+      <ol class="workflow" data-lazy-grid>
         {workflow.steps.map((step, index) => (
           <li>
             <span class="workflow__index" aria-hidden="true">
@@ -223,11 +422,12 @@ const AnalyticsCards: FC<{ analytics: AppContent['analytics'] }> = ({ analytics 
         <h2>{analytics.title}</h2>
         <p class="section__subtitle">{analytics.subtitle}</p>
       </header>
-      <div class="analytics-grid">
+      <div class="analytics-grid" data-lazy-grid>
         {analytics.cards.map((card) => (
           <article class="analytics-card">
             <h3>{card.title}</h3>
             <p>{card.description}</p>
+            {card.insight && <p class="analytics-card__insight">{card.insight}</p>}
           </article>
         ))}
       </div>
@@ -241,7 +441,7 @@ const CaseStudies: FC<{ caseStudies: AppContent['caseStudies'] }> = ({ caseStudi
       <header class="section__header">
         <h2>{caseStudies.title}</h2>
       </header>
-      <div class="case-studies">
+      <div class="case-studies" data-lazy-grid>
         {caseStudies.items.map((item) => (
           <article class="case-card">
             <h3>{item.name}</h3>
@@ -261,7 +461,7 @@ const Testimonials: FC<{ testimonials: AppContent['testimonials'] }> = ({ testim
       <header class="section__header">
         <h2>{testimonials.title}</h2>
       </header>
-      <div class="testimonial-grid">
+      <div class="testimonial-grid" data-lazy-grid>
         {testimonials.items.map((item) => (
           <figure class="testimonial-card">
             <blockquote>“{item.quote}”</blockquote>
@@ -279,29 +479,66 @@ const Testimonials: FC<{ testimonials: AppContent['testimonials'] }> = ({ testim
 const Pricing: FC<{ pricing: AppContent['pricing'] }> = ({ pricing }) => (
   <section id="pricing" class="section section--pricing">
     <div class="container">
-      <header class="section__header">
-        <h2>{pricing.title}</h2>
-        <p class="section__subtitle">{pricing.subtitle}</p>
+      <header class="section__header section__header--center">
+        <p class="section__eyebrow">{pricing.title}</p>
+        <h2>{pricing.subtitle}</h2>
+        <p class="section__subtitle">{pricing.description}</p>
       </header>
-      <div class="pricing-grid">
+      <div class="pricing-highlights">
+        {pricing.highlights.map((highlight) => (
+          <div class="pricing-highlight">
+            <span class="pricing-highlight__icon" aria-hidden="true">{highlight.icon}</span>
+            <div>
+              <h3>{highlight.title}</h3>
+              <p>{highlight.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="pricing-grid" data-lazy-grid>
         {pricing.plans.map((plan) => (
-          <article class={`pricing-card${plan.popular ? ' pricing-card--popular' : ''}`}>
-            {plan.popular && <span class="badge">Most popular</span>}
-            <h3>{plan.name}</h3>
-            <p class="pricing-card__price">
-              {plan.price}
-              <span>{plan.billing}</span>
-            </p>
-            <ul>
+          <article
+            class={`pricing-card${plan.popular ? ' pricing-card--popular' : ''}`}
+            data-plan-intensity={plan.accent ?? 'calm'}
+          >
+            {plan.popular && <span class="badge">{plan.badge ?? 'Most popular'}</span>}
+            <header>
+              <div class="pricing-card__header">
+                <h3>{plan.name}</h3>
+                <p class="pricing-card__tagline">{plan.tagline}</p>
+              </div>
+              <p class="pricing-card__price">
+                {plan.price}
+                <span>{plan.billing}</span>
+              </p>
+            </header>
+            <ul class="pricing-card__features">
               {plan.features.map((feature) => (
                 <li>{feature}</li>
               ))}
             </ul>
-            <a class="button" href="#book">
-              Select plan
+            {plan.services && (
+              <div class="pricing-card__services">
+                <h4>{pricing.serviceLabel}</h4>
+                <ul>
+                  {plan.services.map((service) => (
+                    <li>{service}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <a class="button" href={plan.cta?.href ?? '#book'}>
+              {plan.cta?.label ?? pricing.ctaLabel}
             </a>
           </article>
         ))}
+      </div>
+      <div class="pricing__footer">
+        <p>{pricing.guarantee}</p>
+        <div class="pricing__note">
+          <span aria-hidden="true">★</span>
+          <p>{pricing.note}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -313,7 +550,7 @@ const FAQ: FC<{ faq: AppContent['faq'] }> = ({ faq }) => (
       <header class="section__header">
         <h2>{faq.title}</h2>
       </header>
-      <div class="faq">
+      <div class="faq" data-lazy-accordion>
         {faq.items.map((item) => (
           <details>
             <summary>{item.question}</summary>
@@ -328,15 +565,17 @@ const FAQ: FC<{ faq: AppContent['faq'] }> = ({ faq }) => (
 const Blog: FC<{ blog: AppContent['blog'] }> = ({ blog }) => (
   <section id="blog" class="section section--blog">
     <div class="container">
-      <header class="section__header">
-        <h2>{blog.title}</h2>
+      <header class="section__header section__header--center">
+        <p class="section__eyebrow">{blog.title}</p>
+        <h2>{blog.subtitle}</h2>
+        <p class="section__subtitle">{blog.description}</p>
       </header>
-      <div class="blog-grid">
+      <div class="blog-grid" data-lazy-grid>
         {blog.articles.map((article) => (
           <article class="blog-card">
             <h3>{article.title}</h3>
             <p>{article.description}</p>
-            <a href={article.href}>Read article</a>
+            <a href={article.href}>{article.cta ?? 'Read article'}</a>
           </article>
         ))}
       </div>
@@ -480,97 +719,89 @@ export const Layout: FC<{ content: AppContent; locale: string; locales: string[]
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="/assets/styles.css" />
+        <link rel="stylesheet" href="/assets/legendary-theme.css" />
         <ThemeScript />
       </head>
       <body class="page-shell">
-      <AnnouncementBar announcement={content.announcement} />
-      <header class="site-header" id="top">
-        <div class="container site-header__inner">
-          <a class="logo" href="#hero">Insta-Webyar</a>
-          <Navigation items={content.navigation} />
-          <div class="site-header__actions">
-            <LanguageSwitcher currentLocale={locale} locales={locales} />
-            <a class="button button--ghost" href={content.hero.primaryAction.href}>
-              {content.hero.primaryAction.label}
-            </a>
-            <ThemeToggle />
+        <AnnouncementBar announcement={content.announcement} />
+        <header class="site-header" id="top" data-lazy-section>
+          <div class="container site-header__inner">
+            <a class="logo" href="#hero">Insta-Webyar</a>
+            <Navigation items={content.navigation} />
+            <div class="site-header__actions">
+              <LanguageSwitcher currentLocale={locale} locales={locales} />
+              <a class="button button--ghost" href={content.hero.primaryAction.href}>
+                {content.hero.primaryAction.label}
+              </a>
+              <ThemeToggle />
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main>
-        <section id="hero" class="hero">
-          <div class="container hero__inner">
-            <div class="hero__copy">
-              <p class="eyebrow">{content.hero.eyebrow}</p>
-              <h1>{content.hero.title}</h1>
-              <p class="lead">{content.hero.description}</p>
-              <div class="hero__actions">
-                <a class="button" href={content.hero.primaryAction.href}>
-                  {content.hero.primaryAction.label}
-                </a>
-                <a class="button button--ghost" href={content.hero.secondaryAction.href}>
-                  {content.hero.secondaryAction.label}
-                </a>
+        <main>
+          <HeroShowcase hero={content.hero} />
+
+          <TrustBar trustbar={content.trustbar} />
+
+          <Marquee marquee={content.marquee} />
+
+          <section id="features" class="section section--features">
+            <div class="container">
+              <header class="section__header">
+                <p class="section__eyebrow">{content.features.eyebrow}</p>
+                <h2>{content.features.title}</h2>
+                <p class="section__subtitle">{content.features.subtitle}</p>
+              </header>
+              <div class="feature-panels" data-lazy-grid>
+                {content.features.sections.map((section) => (
+                  <FeatureSection section={section} />
+                ))}
               </div>
-              <HeroHighlights highlights={content.hero.highlights} />
             </div>
-            <div class="hero__aside">
-              <HeroScene />
-              <HeroMedia media={content.hero.media} />
-              <HeroMetrics metrics={content.hero.metrics} />
+          </section>
+
+          <section id="experience" class="section section--experience" data-lazy-section>
+            <div class="container">
+              <header class="section__header">
+                <p class="section__eyebrow">{content.experience.eyebrow}</p>
+                <h2>{content.experience.title}</h2>
+                <p class="section__subtitle">{content.experience.subtitle}</p>
+              </header>
+              <ExperiencePillars pillars={content.experience.pillars} />
+              <ExperienceCards cards={content.experience.cards} />
             </div>
-          </div>
-        </section>
+          </section>
 
-        <TrustBar trustbar={content.trustbar} />
+          <Blueprint blueprint={content.blueprint} />
 
-        <section id="features" class="section section--features">
-          <div class="container">
-            <header class="section__header">
-              <h2>{content.features.title}</h2>
-              <p class="section__subtitle">{content.features.subtitle}</p>
-            </header>
-            <div class="feature-panels">
-              {content.features.sections.map((section) => (
-                <FeatureSection section={section} />
-              ))}
-            </div>
-          </div>
-        </section>
+          <InnovationGrid innovation={content.innovation} />
 
-        <section id="experience" class="section section--experience">
-          <div class="container">
-            <header class="section__header">
-              <h2>{content.experience.title}</h2>
-              <p class="section__subtitle">{content.experience.subtitle}</p>
-            </header>
-            <ExperiencePillars pillars={content.experience.pillars} />
-            <ExperienceCards cards={content.experience.cards} />
-          </div>
-        </section>
+          <WorkflowSteps workflow={content.workflow} />
 
-        <WorkflowSteps workflow={content.workflow} />
+          <AnalyticsCards analytics={content.analytics} />
 
-        <AnalyticsCards analytics={content.analytics} />
+          <Journey journey={content.journey} />
 
-        <CaseStudies caseStudies={content.caseStudies} />
+          <CaseStudies caseStudies={content.caseStudies} />
 
-        <Testimonials testimonials={content.testimonials} />
+          <StudioShowcase studio={content.studio} />
 
-        <Pricing pricing={content.pricing} />
+          <Testimonials testimonials={content.testimonials} />
 
-        <FAQ faq={content.faq} />
+          <Pricing pricing={content.pricing} />
 
-        <Blog blog={content.blog} />
+          <FAQ faq={content.faq} />
 
-        <CTA cta={content.cta} />
-      </main>
+          <Blog blog={content.blog} />
 
-      <Footer footer={content.footer} />
+          <CTA cta={content.cta} />
+        </main>
+
+        <Footer footer={content.footer} />
 
         <script type="module" src="/assets/theme-toggle.js"></script>
         <script type="module" src="/assets/hero-scene.js" defer></script>
+        <script type="module" src="/assets/lazy-panels.js" defer></script>
       </body>
     </html>
   );
