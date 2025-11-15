@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "Insta-Webyar — Official Social Story OS",
-    "description": "Design, localize, and launch polished Instagram stories with a premium, mobile-first workflow tuned for modern teams.",
+    "title": "Insta-Webyar — Legendary Instagram Admin Suite",
+    "description": "Craft legendary Instagram stories with SSR on the edge, intelligent LazyLoading, and a Persian-first commercial design system.",
     "keywords": [
-      "Instagram automation",
-      "story design platform",
-      "social media workflow",
-      "mobile first landing page",
-      "dark mode theme",
-      "creator analytics"
+      "instagram automation",
+      "persian ui kit",
+      "luxury landing page",
+      "server side rendering",
+      "lazy loading",
+      "campaign analytics"
     ],
     "canonical": "https://imen.webyar.cloud/",
     "siteName": "Insta-Webyar",
@@ -16,7 +16,7 @@
     "lang": "en",
     "direction": "ltr",
     "ogImage": "https://imen.webyar.cloud/assets/og-cover.jpg",
-    "ogImageAlt": "Insta-Webyar dashboards showcased across light and dark themes",
+    "ogImageAlt": "Insta-Webyar dashboards across light and dark legendary themes",
     "twitterCard": "summary_large_image",
     "twitterHandle": "@InstaWebyar",
     "author": "Insta-Webyar Studio",
@@ -25,72 +25,46 @@
     "themeColorDark": "#020617"
   },
   "announcement": {
-    "label": "Spring release",
-    "message": "Introducing motion presets, AI captions in 32 languages, and real-time collaboration.",
-    "href": "#changelog"
+    "label": "Legendary release",
+    "message": "Edge SSR, native LazyLoading for hero scenes, and multi-currency planning are now live.",
+    "href": "#changelog",
+    "cta": "See the horizon"
   },
   "navigation": [
-    {
-      "label": "Overview",
-      "href": "#hero"
-    },
-    {
-      "label": "Features",
-      "href": "#features"
-    },
-    {
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "label": "Insights",
-      "href": "#analytics"
-    },
-    {
-      "label": "Resources",
-      "href": "#blog"
-    },
-    {
-      "label": "Pricing",
-      "href": "#pricing"
-    }
+    { "label": "Vision", "href": "#hero" },
+    { "label": "Features", "href": "#features" },
+    { "label": "Blueprint", "href": "#blueprint" },
+    { "label": "Innovation", "href": "#innovation" },
+    { "label": "Journey", "href": "#journey" },
+    { "label": "Plans", "href": "#pricing" },
+    { "label": "Studio", "href": "#studio" },
+    { "label": "FAQ", "href": "#faq" }
   ],
   "hero": {
-    "eyebrow": "Insta-Webyar Studio",
-    "title": "Make social storytelling feel bespoke, every single time",
-    "description": "The official Insta-Webyar theme blends BVazir + Vazirmatn typography, cinematic motion, and AI-assisted writing so your brand looks premium across light and dark modes.",
-    "primaryAction": {
-      "label": "Start free trial",
-      "href": "#pricing"
-    },
-    "secondaryAction": {
-      "label": "Browse template library",
-      "href": "#features"
-    },
+    "eyebrow": "Insta-Webyar Legendary Studio",
+    "title": "Turn every Instagram story into a signature performance",
+    "description": "With the commercial Insta-Webyar theme, BVazir typography, AI copywriting, and cinematic 3D scenes, every post feels couture across light and dark.",
+    "primaryAction": { "label": "Start golden edition", "href": "#pricing" },
+    "secondaryAction": { "label": "Browse the atlas", "href": "#features" },
     "metrics": [
-      {
-        "label": "Campaigns launched",
-        "value": "12k+"
-      },
-      {
-        "label": "Avg. approval time",
-        "value": "4.2h"
-      },
-      {
-        "label": "Engagement lift",
-        "value": "+168%"
-      }
+      { "label": "Active campaigns", "value": "18k+" },
+      { "label": "Approval turnaround", "value": "2.9h" },
+      { "label": "Revenue lift", "value": "+195%" }
     ],
     "highlights": [
-      "Adaptive layouts respond to every device width and input type",
-      "Curated palette system with instant light / dark parity",
-      "Collaboration timeline with contextual voice notes"
+      "RTL-aware motion graphics with mirrored choreography",
+      "Automatic light/dark parity for typography and palettes",
+      "Persian + English AI copywriter with on-brand tonality"
+    ],
+    "footnotes": [
+      "Native LazyLoading for 3D scenes, analytics, and carousels.",
+      "Full-stack SSR on Cloudflare Workers for millisecond TTFB."
     ],
     "media": {
-      "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-      "href": "https://unsplash.com/photos/U3sOwViXhkY",
-      "alt": "Creative marketing team collaborating around a laptop and camera equipment",
-      "caption": "Teams rely on Insta-Webyar dashboards to storyboard polished Instagram campaigns.",
+      "src": "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=1200&q=80",
+      "href": "https://unsplash.com/photos/VRRJ9vgZfJc",
+      "alt": "Luxury marketing team planning Instagram stories",
+      "caption": "The Insta-Webyar studio pairs SSR architecture with legendary aesthetics for every launch.",
       "width": 1200,
       "height": 800
     }
@@ -98,383 +72,605 @@
   "trustbar": {
     "title": "Trusted by experience-led teams",
     "logos": [
-      {
-        "name": "Neshan",
-        "src": "/assets/logos/neshan.svg",
-        "href": "https://neshan.org/"
-      },
-      {
-        "name": "Quantic Labs",
-        "src": "/assets/logos/quantic-labs.svg",
-        "href": "https://quanticlabs.co/"
-      },
-      {
-        "name": "Karvan",
-        "src": "/assets/logos/karvan.svg",
-        "href": "https://karvan.com/"
-      },
-      {
-        "name": "Hafez Media",
-        "src": "/assets/logos/hafez-media.svg",
-        "href": "https://hafezmedia.com/"
-      },
-      {
-        "name": "Studio Simorgh",
-        "src": "/assets/logos/studio-simorgh.svg",
-        "href": "https://studiosimorgh.com/"
-      },
-      {
-        "name": "Nova Growth",
-        "src": "/assets/logos/nova-growth.svg",
-        "href": "https://novagrowth.io/"
-      }
+      { "name": "Neshan", "src": "/assets/logos/neshan.svg", "href": "https://neshan.org/" },
+      { "name": "Quantic Labs", "src": "/assets/logos/quantic-labs.svg", "href": "https://quanticlabs.co/" },
+      { "name": "Karvan", "src": "/assets/logos/karvan.svg", "href": "https://karvan.com/" },
+      { "name": "Hafez Media", "src": "/assets/logos/hafez-media.svg", "href": "https://hafezmedia.com/" },
+      { "name": "Studio Simorgh", "src": "/assets/logos/studio-simorgh.svg", "href": "https://studiosimorgh.com/" },
+      { "name": "Nova Growth", "src": "/assets/logos/nova-growth.svg", "href": "https://novagrowth.io/" }
+    ]
+  },
+  "marquee": {
+    "title": "Velvet brand runway",
+    "subtitle": "A continuous parade of global commercial craft infused with Persian artistry.",
+    "description": "Every interaction blends Iranian visual cues with international luxury standards so the experience feels rare.",
+    "ribbons": [
+      "Custom BVazir + Vazirmatn typography",
+      "Sapphire & gold design tokens",
+      "LazyLoaded interactive slides",
+      "Multi-region SSR orchestration",
+      "Persian AI captions & hashtags",
+      "Predictive engagement analytics",
+      "WhatsApp Business automations",
+      "Persian cultural campaign calendar"
+    ],
+    "metrics": [
+      { "label": "Platform uptime", "value": "99.94%", "description": "Cloudflare Workers global edge" },
+      { "label": "Average TTFB", "value": "140ms", "description": "Edge SSR with adaptive caching" },
+      { "label": "Team satisfaction", "value": "+96", "description": "Experience score across 380 teams" }
     ]
   },
   "features": {
-    "title": "Every layer tuned for premium UI/UX",
-    "subtitle": "Build immersive campaigns with modular design primitives and AI assistance.",
+    "eyebrow": "Legendary features",
+    "title": "Every layer tuned for luxury-grade teams",
+    "subtitle": "Design, localize, launch, and analyze with a tightly orchestrated commercial toolkit.",
     "sections": [
       {
         "id": "templating",
-        "title": "Template Atelier",
-        "description": "Swap between 240+ cinematic compositions, animate elements with choreographed easing, and export in retina-perfect formats.",
+        "title": "Royal template atelier",
+        "description": "Explore 280 cinematic layouts with GPU motion and perfect RTL alignment.",
+        "ribbon": "New",
+        "meta": "Syncs with Adobe CC + Figma tokens",
         "bullets": [
-          {
-            "icon": "palette",
-            "title": "Precision layouts",
-            "description": "Auto-adjust typography, margins, and imagery with smart breakpoint rules."
-          },
-          {
-            "icon": "brain",
-            "title": "Contextual AI",
-            "description": "Generate localized captions, alt text, and CTA ideas based on your creative brief."
-          },
-          {
-            "icon": "joystick",
-            "title": "Motion recipes",
-            "description": "Apply tasteful transitions and micro-interactions built with GPU-optimized animation tokens."
-          }
+          { "icon": "palette", "title": "Intelligent layout", "description": "Spacing and typography adapt to aspect ratio and language." },
+          { "icon": "bolt", "title": "Motion sync", "description": "120fps-ready animations with physically-based easing." },
+          { "icon": "joystick", "title": "Preset library", "description": "Store branded motion recipes and reuse them across workspaces." }
+        ],
+        "media": {
+          "src": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Designing a cinematic Instagram story layout",
+          "caption": "The atelier keeps light and dark parity in a single artboard.",
+          "width": 1200,
+          "height": 720
+        }
+      },
+      {
+        "id": "ai-copy",
+        "title": "Persian-native AI narrator",
+        "description": "Generate captions in Persian, English, and Arabic while honoring brand tone.",
+        "ribbon": "Persian AI",
+        "meta": "Six tonalities, forty-six caption frameworks",
+        "bullets": [
+          { "icon": "brain", "title": "Contextual reasoning", "description": "Learns from past campaigns to suggest bespoke narratives." },
+          { "icon": "target", "title": "Dynamic hashtags", "description": "Blends Persian and English tags from live trend data." },
+          { "icon": "globe", "title": "Instant translation", "description": "Convert copy between Persian, English, and Turkish with nuance." }
         ]
       },
       {
-        "id": "brand-kit",
-        "title": "Brand Command Center",
-        "description": "Keep every asset on-brand with enforceable guardrails and collaborative review flows.",
+        "id": "commerce",
+        "title": "Commercial bridge",
+        "description": "Connect storefronts, WhatsApp Business, and CRM with automated flows.",
+        "meta": "Works with Zarinpal, PayPing, Stripe",
         "bullets": [
-          {
-            "icon": "shield",
-            "title": "Guardrails",
-            "description": "Lock fonts, spacing, and tone to maintain official brand presence."
-          },
-          {
-            "icon": "handshake",
-            "title": "Approvals",
-            "description": "Route story drafts through comments, annotations, and sign-off checkpoints."
-          },
-          {
-            "icon": "box",
-            "title": "Asset vault",
-            "description": "Manage reusable overlays, stickers, and music beds in one organized system."
-          }
+          { "icon": "layers", "title": "CRM bridge", "description": "Native hooks for HubSpot, RaastCRM, and Salesforce." },
+          { "icon": "sparkles", "title": "Journey automations", "description": "Orchestrate welcome, cart, and seasonal Persian rituals." },
+          { "icon": "shield", "title": "Enterprise security", "description": "Full encryption for transactions and customer data." }
         ]
       },
       {
-        "id": "automation",
-        "title": "Automation Playbooks",
-        "description": "Trigger workflows that personalize stories, schedule posts, and analyze engagement in real time.",
+        "id": "observatory",
+        "title": "Engagement observatory",
+        "description": "3D dashboards with LazyLoading for heavy charts and live metrics.",
+        "meta": "Fuses Instagram Insights and GA4 in real time",
         "bullets": [
-          {
-            "icon": "bolt",
-            "title": "Smart scheduling",
-            "description": "Coordinate posts with AI-generated best-time insights across time zones."
-          },
-          {
-            "icon": "chart",
-            "title": "Live dashboards",
-            "description": "Monitor reach, saves, taps, and conversions with signature Pro UI widgets."
-          },
-          {
-            "icon": "loop",
-            "title": "Reusable flows",
-            "description": "Clone entire campaigns, remix assets, and automate publishing to every channel."
-          }
-        ]
+          { "icon": "chart", "title": "Growth forecasts", "description": "Model audience momentum up to 90 days ahead." },
+          { "icon": "cloud", "title": "Edge analytics", "description": "Keep workload at the edge so core servers stay free." },
+          { "icon": "radar", "title": "Real-time alerts", "description": "Get notified when engagement spikes or dips." }
+        ],
+        "media": {
+          "src": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Analytical dashboard with live charts",
+          "caption": "LazyLoading keeps heavy visualizations off the critical path.",
+          "width": 1200,
+          "height": 800
+        }
       }
     ]
   },
   "experience": {
-    "title": "Experience the official Insta-Webyar flow",
-    "subtitle": "Designed mobile-first with pixel-perfect responsiveness and thoughtful accessibility.",
+    "eyebrow": "Team experience",
+    "title": "How your crew shines inside Insta-Webyar",
+    "subtitle": "Dedicated paths for marketing leads, designers, copywriters, and analysts.",
     "pillars": [
-      {
-        "title": "Immersive workspace",
-        "description": "Arrange blocks with drag handles, advanced snapping, and real-time device previews."
-      },
-      {
-        "title": "Collaborative canvas",
-        "description": "Leave inline feedback, mention teammates, and resolve threads with audit-ready history."
-      },
-      {
-        "title": "Insight-driven decisions",
-        "description": "Blend qualitative storytelling with quantitative analytics in a unified panel."
-      }
+      { "badge": "I", "title": "Executive clarity", "description": "Summaries engineered for fast, confident decisions." },
+      { "badge": "II", "title": "Real-time collaboration", "description": "Co-edit with voice, video, and Persian notes." },
+      { "badge": "III", "title": "Operational harmony", "description": "Template libraries and auto versioning per campaign." }
     ],
     "cards": [
       {
-        "title": "Responsive by design",
-        "description": "Story frames scale fluidly from 320px mobile breakpoints up to 4K displays using fractional spacing and type ramps.",
+        "index": "01",
+        "label": "Brand lead",
+        "title": "Strategic cockpit",
+        "description": "Align season goals, KPI, and approvals in one orchestrated view.",
         "points": [
-          "Density controls for content-heavy campaigns",
-          "RTL-aware layouts with Vazirmatn as default script",
-          "Configurable safe areas for platform overlays"
+          "Persian ritual-aware campaign calendar",
+          "Executive-ready summary decks",
+          "Brand standard automation"
+        ],
+        "metric": { "label": "Decision speed", "value": "-36%" }
+      },
+      {
+        "index": "02",
+        "label": "Creative",
+        "title": "Visual workshop",
+        "description": "Cinematic motion, retina exports, and color tokens are ready to go.",
+        "points": [
+          "Upload custom fonts and palettes",
+          "3D mockups for stories and reels",
+          "Live preview on mobile + desktop"
+        ],
+        "metric": { "label": "Production velocity", "value": "2.4×" }
+      },
+      {
+        "index": "03",
+        "label": "Analyst",
+        "title": "Data observatory",
+        "description": "Edge analytics and predictive models keep engagement on course.",
+        "points": [
+          "Pre-built models for stories and reels",
+          "Custom campaign tagging",
+          "Exports to CSV and Looker Studio"
+        ],
+        "metric": { "label": "Forecast accuracy", "value": "+42%" }
+      }
+    ]
+  },
+  "blueprint": {
+    "title": "Legendary blueprint",
+    "subtitle": "A multi-layer system from edge render to audience delight.",
+    "description": "Each layer keeps content, data, and automation in sync with ultra-low latency.",
+    "layers": [
+      {
+        "name": "Story layer",
+        "intent": "craft",
+        "intentLabel": "Story Craft",
+        "description": "Templates, typography, and motion tuned for Persian + English storytelling.",
+        "capabilities": [
+          "280 curated templates",
+          "GPU animation library",
+          "Light / dark theme parity"
+        ],
+        "insight": "Components render via SSR and hydrate with LazyLoaded enhancements."
+      },
+      {
+        "name": "Data layer",
+        "intent": "system",
+        "intentLabel": "Data Mesh",
+        "description": "Edge analytics streaming GA4 and Instagram Insights into one flow.",
+        "capabilities": [
+          "Predictive modeling",
+          "Real-time alerting",
+          "BI-ready exports"
+        ],
+        "insight": "Runs on Cloudflare Workers with global caching and observability."
+      },
+      {
+        "name": "Growth layer",
+        "intent": "expansion",
+        "intentLabel": "Growth Ops",
+        "description": "Automate audience journeys, CRM sync, and WhatsApp Business sales moments.",
+        "capabilities": [
+          "Automated messaging",
+          "Audience segmentation",
+          "Commerce integrations"
+        ],
+        "insight": "Fully compliant with Iranian and EU privacy regulations."
+      }
+    ]
+  },
+  "innovation": {
+    "title": "Infrastructure innovations",
+    "subtitle": "SSR, LazyLoading, and intelligence working in concert for your brand.",
+    "description": "Every capability is crafted for fast response times and mesmerizing UX.",
+    "columns": [
+      {
+        "title": "SSR orchestra",
+        "description": "Server-side rendering with autonomous performance guardians.",
+        "points": [
+          "Edge rendering across 26 cities",
+          "Prewarm modes for high-traffic launches",
+          "GraphQL-driven monitoring"
         ]
       },
       {
-        "title": "Dark mode that feels intentional",
-        "description": "Colors, shadows, and typography invert using perceptually-uniform tokens for consistent contrast.",
+        "title": "Adaptive LazyLoading",
+        "description": "Heavy sections load only when the audience is ready to explore.",
         "points": [
-          "Hue-preserving gradients and overlays",
-          "Tone-mapped imagery with adaptive luminance",
-          "WCAG AA+ verified combinations"
+          "Intersection observers for 3D scenes",
+          "Streamed analytics visualizations",
+          "Offline-aware fallbacks for unstable networks"
+        ]
+      },
+      {
+        "title": "Commercial intelligence",
+        "description": "Live dashboards for marketing, sales, and success teams.",
+        "points": [
+          "Personalized KPI cards",
+          "Multilingual predictive models",
+          "Open APIs for data teams"
         ]
       }
     ]
   },
   "workflow": {
-    "title": "A guided path from idea to publish",
+    "title": "Campaign cycle",
     "steps": [
-      {
-        "title": "Brief & moodboard",
-        "description": "Input campaign goals, drop inspiration references, and let the AI moodboard curate assets that match your tone."
-      },
-      {
-        "title": "Compose & adapt",
-        "description": "Drag, resize, and adapt templates with live breakpoints, auto-captioning, and guided contrast checks."
-      },
-      {
-        "title": "Preview & launch",
-        "description": "Simulate taps, hold interactions, and schedule across platforms with automation hooks."
-      }
+      { "title": "Discovery", "description": "Fill the campaign brief with market signals and creative goals." },
+      { "title": "Design & motion", "description": "Co-create cinematic stories with synchronized branding assets." },
+      { "title": "Omni-channel launch", "description": "Publish across Instagram, WhatsApp, and landing pages with one click." },
+      { "title": "Insights & growth", "description": "Track engagement through 3D dashboards and optimize instantly." }
     ],
-    "cta": {
-      "label": "View automation recipes",
-      "href": "#automation"
-    }
+    "cta": { "label": "See full checklist", "href": "#cta" }
   },
   "analytics": {
-    "title": "Insights that surface the why",
-    "subtitle": "Understand audience sentiment, conversion paths, and creative performance from a single command center.",
+    "title": "Real-time analytics",
+    "subtitle": "Dynamic charts and KPI cards engineered for LazyLoading.",
     "cards": [
       {
-        "title": "Engagement intelligence",
-        "description": "See swipe-away reasons, next-best-action suggestions, and AI-generated experiment ideas."
+        "title": "360° view",
+        "description": "See sales, engagement, and growth signals together.",
+        "insight": "LazyLoading keeps first paint lean while heavy charts stream in."
       },
       {
-        "title": "Attribution clarity",
-        "description": "Trace link clicks to downstream sales, retarget top segments, and export investor-ready reports."
+        "title": "Predictive intelligence",
+        "description": "Self-learning models surface optimal publishing windows.",
+        "insight": "Edge analytics refreshes every five minutes with zero downtime."
       },
       {
-        "title": "Team operations",
-        "description": "Track review cycles, production velocity, and utilization to keep teams aligned."
+        "title": "Team flow",
+        "description": "Follow tasks, approvals, and conversations in a single timeline.",
+        "insight": "SSR ensures sub-second response even on slower networks."
+      }
+    ]
+  },
+  "journey": {
+    "title": "Golden journey",
+    "subtitle": "Four luxury steps from insight to report.",
+    "description": "Each milestone ships with Persian resources and global best practices.",
+    "steps": [
+      {
+        "title": "Insight ignition",
+        "description": "Analyze market and audience through regional + global datasets.",
+        "details": [
+          "Shareable Persian questionnaires",
+          "AI competitor analysis",
+          "Branded PDF insights"
+        ]
+      },
+      {
+        "title": "Design the masterpiece",
+        "description": "Craft story-driven visuals with rich motion and palette tokens.",
+        "details": [
+          "Motion libraries",
+          "Eight aspect ratios",
+          "AR preview"
+        ]
+      },
+      {
+        "title": "Coordinated launch",
+        "description": "Schedule stories and reels across timezones with synchronized messaging.",
+        "details": [
+          "WhatsApp and Telegram sync",
+          "Automatic commerce links",
+          "Live monitoring"
+        ]
+      },
+      {
+        "title": "Lux analysis",
+        "description": "Deliver interactive reports with bespoke theming for executives and clients.",
+        "details": [
+          "3D dashboards",
+          "Automated summary emails",
+          "Data team API"
+        ]
       }
     ]
   },
   "caseStudies": {
-    "title": "Stories from ambitious teams",
+    "title": "Showcase case studies",
     "items": [
       {
-        "name": "GlowUp Cosmetics",
-        "headline": "+212% story saves in 45 days",
-        "summary": "Automated content calendars and data-driven A/B tests led to a viral seasonal launch.",
-        "link": "#glowup"
+        "name": "Karvan",
+        "headline": "+230% Nowruz travel revenue",
+        "summary": "Karvan scaled its holiday campaigns using Persian-first templates and ritual calendars.",
+        "link": "https://karvan.com/case-study"
       },
       {
-        "name": "Voyage Mobility",
-        "headline": "Global rollout with localized assets",
-        "summary": "Leveraged RTL-ready themes and motion recipes to coordinate launches across 18 markets.",
-        "link": "#voyage"
+        "name": "Neshan",
+        "headline": "+180% daily engagement",
+        "summary": "LazyLoaded dashboards and live reports helped Neshan react in the moment.",
+        "link": "https://neshan.org/case-study"
+      },
+      {
+        "name": "Hafez Media",
+        "headline": "4× production output",
+        "summary": "The creative studio now ships four campaigns a week with cinematic presets and AI copy.",
+        "link": "https://hafezmedia.com/case-study"
+      }
+    ]
+  },
+  "studio": {
+    "title": "Insta-Webyar studio",
+    "subtitle": "Concierge services for executives, agencies, and luxury brands.",
+    "description": "Launch, train, and accelerate every team with Persian-first expertise.",
+    "cards": [
+      {
+        "icon": "🕌",
+        "title": "Persian onboarding",
+        "description": "Implement, customize, and migrate content in seven days.",
+        "highlights": [
+          "Full RTL + typography setup",
+          "Story archive migration",
+          "Team documentation"
+        ],
+        "badge": "6-day sprint"
+      },
+      {
+        "icon": "🌌",
+        "title": "Motion atelier",
+        "description": "Hybrid workshops to craft cinematic stories and reels.",
+        "highlights": [
+          "GPU motion training",
+          "Custom preset creation",
+          "Design team coaching"
+        ]
+      },
+      {
+        "icon": "🏛️",
+        "title": "Growth architecture",
+        "description": "Map funnels, WhatsApp playbooks, and automated nurturing.",
+        "highlights": [
+          "Customer journey mapping",
+          "Playbook implementation",
+          "ROI analytics"
+        ],
+        "badge": "Agency exclusive"
       }
     ]
   },
   "testimonials": {
-    "title": "Loved by creative operations leaders",
+    "title": "Voices from legendary teams",
     "items": [
       {
-        "quote": "The official Insta-Webyar theme feels like an internal creative team in a box—polished, fast, and reliable.",
-        "author": "Dorsa Rahimi",
-        "role": "Creative Director, Pixely Studio"
+        "quote": "No other platform understands the Iranian market like Insta-Webyar. Our teams love the LazyLoaded dashboards and Persian motion kits.",
+        "author": "Maedeh Rafiei",
+        "role": "Marketing Director, Hafez Studio"
       },
       {
-        "quote": "We standardized every campaign workflow with Insta-Webyar. Feedback cycles dropped from days to minutes.",
-        "author": "Reza Moghimi",
-        "role": "Head of Marketing, Navahang"
+        "quote": "SSR-first architecture keeps our launch pages instant even during peak traffic.",
+        "author": "Sina Rastgar",
+        "role": "Product Lead, Neshan"
       },
       {
-        "quote": "Dark mode finally looks intentional. The contrast, the micro-interactions, the typography—it's agency-level.",
-        "author": "Sara Farhadi",
-        "role": "Product Marketing Lead, Orbital"
+        "quote": "The Persian AI library helped us deliver 40 campaigns in a single week without sacrificing tone.",
+        "author": "Samira Mahmoudi",
+        "role": "Digital Content Lead, Karvan"
       }
     ]
   },
   "pricing": {
-    "title": "Flexible plans for every stage",
-    "subtitle": "Start with light mode, go pro with dark mode, and scale with automation. All tiers include the official theme.",
+    "title": "Administrative plans",
+    "subtitle": "Seven to eight tiers built for Persian Instagram operations, from IRR 3M to 25M per month.",
+    "description": "Every plan ships with SSR, LazyLoading, bilingual support, and secure storage.",
+    "serviceLabel": "Concierge services",
+    "ctaLabel": "Request a bespoke demo",
+    "guarantee": "7-day money-back guarantee plus free migration.",
+    "note": "Prices are listed in Iranian Toman. Foreign currency billing is available on request.",
+    "highlights": [
+      {
+        "icon": "💠",
+        "title": "Royal design",
+        "description": "Color tokens inspired by Persian mosaics with luminous dark mode."
+      },
+      {
+        "icon": "🛰️",
+        "title": "Edge delivery",
+        "description": "Edge SSR keeps median page response around 140ms worldwide."
+      },
+      {
+        "icon": "🤝",
+        "title": "Dedicated success",
+        "description": "Persian-speaking success partners support every plan."
+      }
+    ],
     "plans": [
       {
-        "name": "Creator",
-        "price": "$19",
-        "billing": "per month",
-        "popular": false,
+        "name": "Prime Foundation",
+        "tagline": "For agile startups",
+        "price": "3,000,000 تومان",
+        "billing": "Monthly",
         "features": [
-          "Unlimited story exports",
-          "40 AI caption generations",
-          "Official light mode theme"
-        ]
+          "10 signature templates",
+          "Core KPI dashboard",
+          "1 admin seat"
+        ],
+        "services": ["4-hour setup", "Email support"],
+        "cta": { "label": "Launch fast", "href": "#contact" },
+        "accent": "calm"
       },
       {
-        "name": "Studio",
-        "price": "$59",
-        "billing": "per month",
+        "name": "Growth Studio",
+        "tagline": "For content squads",
+        "price": "5,500,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "25 dynamic templates",
+          "Bilingual AI captions",
+          "WhatsApp Business sync"
+        ],
+        "services": ["90-minute onboarding", "Live chat support"],
+        "cta": { "label": "Reserve plan", "href": "#contact" },
+        "accent": "focus"
+      },
+      {
+        "name": "Golden Agency",
+        "tagline": "For creative agencies",
+        "price": "8,900,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "45 cinematic presets",
+          "White-label reporting",
+          "3 dedicated workspaces"
+        ],
+        "services": ["Creative coaching", "Marketing API access"],
+        "cta": { "label": "Book consultation", "href": "#contact" },
+        "accent": "luxe",
         "popular": true,
-        "features": [
-          "Dark mode parity",
-          "Advanced analytics dashboard",
-          "Collaboration timelines",
-          "Priority success coaching"
-        ]
+        "badge": "Popular"
       },
       {
-        "name": "Agency",
-        "price": "$149",
-        "billing": "per month",
-        "popular": false,
+        "name": "Engagement Envoy",
+        "tagline": "For enterprise squads",
+        "price": "12,000,000 تومان",
+        "billing": "Monthly",
         "features": [
-          "Multi-brand workspaces",
-          "White-label exports",
-          "Automation playbooks",
-          "Dedicated technical partner"
-        ]
+          "3D analytics dashboards",
+          "Advanced LazyLoading",
+          "Global calendar sync"
+        ],
+        "services": ["24/7 support", "Dedicated success lead"],
+        "cta": { "label": "Expert session", "href": "#contact" },
+        "accent": "bold"
+      },
+      {
+        "name": "Saffron Plus",
+        "tagline": "For luxury commerce",
+        "price": "15,500,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Bespoke motion design",
+          "Social commerce finance reports",
+          "AR filters"
+        ],
+        "services": ["Sales playbook design", "On-site training"],
+        "cta": { "label": "Draft agreement", "href": "#contact" },
+        "accent": "royal"
+      },
+      {
+        "name": "Indigo Strategist",
+        "tagline": "For multi-brand groups",
+        "price": "19,000,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Unlimited projects",
+          "99.9% SLA",
+          "Advanced CRM sync"
+        ],
+        "services": ["Dedicated DevOps", "Quarterly strategy summits"],
+        "cta": { "label": "Boardroom briefing", "href": "#contact" },
+        "accent": "night"
+      },
+      {
+        "name": "Crystal Dominion",
+        "tagline": "For media holdings",
+        "price": "22,000,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Enterprise tokens",
+          "Multi-level roles",
+          "Dedicated edge analytics"
+        ],
+        "services": ["On-premise support", "Monthly team training"],
+        "cta": { "label": "Request proposal", "href": "#contact" },
+        "accent": "diamond"
+      },
+      {
+        "name": "Imperial Saffron",
+        "tagline": "For international organizations",
+        "price": "25,000,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Multi-region architecture",
+          "Full compliance suite",
+          "Digital signature & legal logging"
+        ],
+        "services": ["Custom cloud architecture", "Advanced data analysis"],
+        "cta": { "label": "Enter negotiations", "href": "#contact" },
+        "accent": "imperial"
       }
     ]
   },
   "faq": {
-    "title": "FAQ",
+    "title": "Frequently asked questions",
     "items": [
       {
-        "question": "Does Insta-Webyar support RTL scripts?",
-        "answer": "Absolutely. The official theme ships with Vazirmatn as the default Farsi typeface and dynamic line-height adjustments."
+        "question": "Is SSR and LazyLoading enabled by default?",
+        "answer": "Yes. Insta-Webyar is rendered via SSR and every heavy section hydrates through adaptive LazyLoading."
       },
       {
-        "question": "Can we import motion presets?",
-        "answer": "Yes. Upload Lottie, After Effects JSON, or Insta-Webyar native presets and apply them with GPU-accelerated easing."
+        "question": "Can we pay in foreign currency?",
+        "answer": "International teams can receive invoices in USD or EUR while the dashboard shows local Toman values."
       },
       {
-        "question": "How secure is the asset vault?",
-        "answer": "We provide end-to-end encryption, audit logs, and SSO with granular permissions."
+        "question": "Do you integrate with CRM platforms?",
+        "answer": "Absolutely. Connect HubSpot, Salesforce, RaastCRM, and more through our prebuilt bridges."
       }
     ]
   },
   "blog": {
-    "title": "Resource library",
+    "title": "Insta-Webyar journal",
+    "subtitle": "The latest on design, growth, and Instagram operations.",
+    "description": "Follow bilingual articles, webinars, and research reports crafted by our studio.",
     "articles": [
       {
-        "title": "Designing motion-first stories",
-        "description": "Craft immersive Instagram stories with layered motion, dynamic typography, and data-backed storytelling.",
-        "href": "#motion"
+        "title": "LazyLoading protocol for Persian brands",
+        "description": "Survive Yalda peak traffic while preserving a luxurious experience.",
+        "href": "https://imen.webyar.cloud/articles/lazyloading-persian",
+        "cta": "Read the playbook"
       },
       {
-        "title": "The case for intentional dark mode",
-        "description": "Why premium brands launch dual themes and how to maintain contrast ratios without sacrificing personality.",
-        "href": "#dark-mode"
+        "title": "SSR on Cloudflare Workers",
+        "description": "The architecture that quadruples response speed across the globe.",
+        "href": "https://imen.webyar.cloud/articles/ssr-cloudflare",
+        "cta": "Explore the architecture"
       },
       {
-        "title": "Collaboration rituals that scale",
-        "description": "Operational tips from agencies that ship hundreds of campaigns every quarter.",
-        "href": "#collaboration"
+        "title": "Instagram sales playbooks",
+        "description": "Design WhatsApp, story, and landing flows that close deals faster.",
+        "href": "https://imen.webyar.cloud/articles/instagram-playbook",
+        "cta": "Dive into the guide"
       }
     ]
   },
   "cta": {
-    "title": "Ready to launch the official Insta-Webyar experience?",
-    "subtitle": "Join thousands of teams shipping premium, data-aware stories without adding headcount.",
-    "primaryAction": {
-      "label": "Book a guided tour",
-      "href": "#book"
-    },
-    "secondaryAction": {
-      "label": "Download spec sheet",
-      "href": "#download"
-    }
+    "title": "Ready to build legendary Instagram stories?",
+    "subtitle": "Book a personalized walkthrough with our Persian-led success team.",
+    "primaryAction": { "label": "Book a session", "href": "#contact" },
+    "secondaryAction": { "label": "Download brochure", "href": "https://imen.webyar.cloud/brochure-en.pdf" }
   },
   "footer": {
-    "tagline": "Insta-Webyar — the polished social story OS",
+    "tagline": "Legendary theme for Instagram mastery",
     "links": [
-      {
-        "label": "Product",
-        "href": "#features"
-      },
-      {
-        "label": "Security",
-        "href": "#security"
-      },
-      {
-        "label": "Status",
-        "href": "#status"
-      }
+      { "label": "Support", "href": "https://imen.webyar.cloud/support" },
+      { "label": "Academy", "href": "https://imen.webyar.cloud/academy" },
+      { "label": "Partnerships", "href": "https://imen.webyar.cloud/partners" }
     ],
     "columns": [
       {
-        "title": "Platform",
+        "title": "Product",
         "links": [
-          {
-            "label": "Template library",
-            "href": "#features"
-          },
-          {
-            "label": "Automation",
-            "href": "#automation"
-          },
-          {
-            "label": "Integrations",
-            "href": "#integrations"
-          }
-        ]
-      },
-      {
-        "title": "Company",
-        "links": [
-          {
-            "label": "About",
-            "href": "#about"
-          },
-          {
-            "label": "Careers",
-            "href": "#careers"
-          },
-          {
-            "label": "Press",
-            "href": "#press"
-          }
+          { "label": "Features", "href": "#features" },
+          { "label": "Pricing", "href": "#pricing" },
+          { "label": "Demo", "href": "#cta" }
         ]
       },
       {
         "title": "Resources",
         "links": [
-          {
-            "label": "Blog",
-            "href": "#blog"
-          },
-          {
-            "label": "Guides",
-            "href": "#guides"
-          },
-          {
-            "label": "Support",
-            "href": "mailto:hello@instawebyar.com"
-          }
+          { "label": "Journal", "href": "#blog" },
+          { "label": "Webinars", "href": "https://imen.webyar.cloud/webinars" },
+          { "label": "FAQ", "href": "#faq" }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          { "label": "Contact", "href": "https://imen.webyar.cloud/contact" },
+          { "label": "Telegram", "href": "https://t.me/instawebyar" },
+          { "label": "LinkedIn", "href": "https://linkedin.com/company/insta-webyar" }
         ]
       }
     ],
-    "legal": "© 2024 Insta-Webyar. All rights reserved."
+    "legal": "© {year} Insta-Webyar. All rights reserved."
   }
 }
