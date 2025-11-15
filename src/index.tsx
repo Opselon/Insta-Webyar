@@ -1,43 +1,43 @@
 import { Hono } from 'hono';
 import { jsxRenderer } from 'hono/jsx-renderer';
 
-import { Layout } from './templates/Layout';
+import { Layout } from './templates/Layout.js';
 import {
   defaultLocale,
   getAvailableLocales,
   getContent,
   resolveLocale
-} from './utils/i18n';
+} from './utils/i18n.js';
 
-type AssetFetcher = {
-  fetch: (request: Request) => Promise<Response>;
-};
-
+// Define the bindings that are available on the environment
 type Bindings = {
-  ASSETS: AssetFetcher;
+  ASSETS: Fetcher;
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
 
-const availableLocales = getAvailableLocales();
+// Handler for serving static assets from the ASSETS binding
+app.get('/assets/*', async (c) => {
+  // Construct a new URL to remove the /assets/ prefix
+  const url = new URL(c.req.url);
+  url.pathname = url.pathname.replace(/^\/assets\//, '');
 
-app.on(['GET', 'HEAD'], '/assets/*', async (c) => {
-  const assetResponse = await c.env.ASSETS.fetch(c.req.raw);
+  // Create a new request with the modified URL
+  const newRequest = new Request(url.toString(), c.req.raw);
 
-  if (assetResponse.status === 404) {
-    return c.notFound();
+  // Fetch the asset from the ASSETS binding
+  const response = await c.env.ASSETS.fetch(newRequest);
+
+  if (response.ok) {
+    // Return the response if the asset is found
+    return response;
   }
 
-  const headers = new Headers(assetResponse.headers);
-  if (!headers.has('cache-control')) {
-    headers.set('cache-control', 'public, max-age=604800, immutable');
-  }
-
-  return new Response(assetResponse.body, {
-    status: assetResponse.status,
-    headers
-  });
+  // Return not found if the asset is not in the bucket
+  return c.notFound();
 });
+
+const availableLocales = getAvailableLocales();
 
 app.use('*', jsxRenderer());
 

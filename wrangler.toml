@@ -5,6 +5,3 @@ workers_dev = true
 
 [site]
 bucket = "src/static"
-
-[build]
-command = ""

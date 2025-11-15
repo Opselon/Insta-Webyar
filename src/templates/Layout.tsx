@@ -1,9 +1,9 @@
 import type { FC } from 'hono/jsx';
-import type { AppContent } from '../utils/i18n';
-import { defaultLocale } from '../utils/i18n';
-import { renderIcon } from '../icons/IconRegistry';
-import { HeroScene } from './HeroScene';
-import { ThemeScript, ThemeToggle } from './ThemeToggle';
+import type { AppContent } from '../utils/i18n.js';
+import { defaultLocale } from '../utils/i18n.js';
+import { renderIcon } from '../icons/IconRegistry.js';
+import { HeroScene } from './HeroScene.js';
+import { ThemeScript, ThemeToggle } from './ThemeToggle.js';
 
 const AnnouncementBar: FC<{ announcement: AppContent['announcement'] }> = ({ announcement }) => (
   <div class="announcement" role="region" aria-label="Product update">
