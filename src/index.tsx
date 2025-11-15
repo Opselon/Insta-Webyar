@@ -1,5 +1,7 @@
 import { Hono } from 'hono';
 import { jsxRenderer } from 'hono/jsx-renderer';
+import { serveStatic } from 'hono/cloudflare-workers';
+import manifest from '__STATIC_CONTENT_MANIFEST';
 
 import { Layout } from './templates/Layout.js';
 import {
@@ -9,33 +11,16 @@ import {
   resolveLocale
 } from './utils/i18n.js';
 
-// Define the bindings that are available on the environment
-type Bindings = {
-  ASSETS: Fetcher;
-};
+const app = new Hono();
 
-const app = new Hono<{ Bindings: Bindings }>();
-
-// Handler for serving static assets from the ASSETS binding
-app.get('/assets/*', async (c) => {
-  // Construct a new URL to remove the /assets/ prefix
-  const url = new URL(c.req.url);
-  url.pathname = url.pathname.replace(/^\/assets\//, '');
-
-  // Create a new request with the modified URL
-  const newRequest = new Request(url.toString(), c.req.raw);
-
-  // Fetch the asset from the ASSETS binding
-  const response = await c.env.ASSETS.fetch(newRequest);
-
-  if (response.ok) {
-    // Return the response if the asset is found
-    return response;
-  }
-
-  // Return not found if the asset is not in the bucket
-  return c.notFound();
-});
+// Use the correct, platform-specific serveStatic middleware with the required manifest.
+app.use(
+  '/assets/*',
+  serveStatic({
+    manifest,
+    rewriteRequestPath: (path) => path.replace(/^\/assets\//, ''),
+  })
+);
 
 const availableLocales = getAvailableLocales();
 

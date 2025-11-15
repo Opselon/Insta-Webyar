@@ -1,5 +1,5 @@
-import en from '../data/en.json';
-import fa from '../data/fa.json';
+import en from '../data/en.json' with { type: 'json' };
+import fa from '../data/fa.json' with { type: 'json' };
 
 export type AppContent = typeof en;
 
