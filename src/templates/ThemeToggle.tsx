@@ -1,4 +1,5 @@
 import type { FC } from 'hono/jsx';
+import { MoonIcon, SunIcon } from '../icons/ThemeIcons';
 
 export const ThemeScript: FC = () => (
   <script
@@ -31,8 +32,8 @@ export const ThemeToggle: FC = () => (
     aria-live="polite"
     data-theme-toggle
   >
-    <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀️</span>
-    <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+    <SunIcon className="theme-toggle__icon theme-toggle__icon--sun" />
+    <MoonIcon className="theme-toggle__icon theme-toggle__icon--moon" />
     <span class="theme-toggle__label">Switch to dark mode</span>
   </button>
 );
