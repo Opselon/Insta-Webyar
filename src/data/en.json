@@ -1,22 +1,22 @@
 {
   "meta": {
-    "title": "Insta-Webyar — Official Social Story OS",
-    "description": "Design, localize, and launch polished Instagram stories with a premium, mobile-first workflow tuned for modern teams.",
+    "title": "Insta-Webyar — Instagram Admin & Security Bureau",
+    "description": "Insta-Webyar delivers Persian-first Instagram admin, shadow-ban recovery, and high-trust growth campaigns with SSR speed and staged lazy loading.",
     "keywords": [
-      "Instagram automation",
-      "story design platform",
-      "social media workflow",
-      "mobile first landing page",
-      "dark mode theme",
-      "creator analytics"
+      "Instagram admin services",
+      "Instagram security in Persian",
+      "account recovery",
+      "shadow ban removal",
+      "social media operations",
+      "Persian SSR marketing site"
     ],
     "canonical": "https://imen.webyar.cloud/",
     "siteName": "Insta-Webyar",
     "locale": "en_US",
     "lang": "en",
     "direction": "ltr",
-    "ogImage": "https://imen.webyar.cloud/assets/og-cover.jpg",
-    "ogImageAlt": "Insta-Webyar dashboards showcased across light and dark themes",
+    "ogImage": "https://imen.webyar.cloud/assets/og-cover-en.jpg",
+    "ogImageAlt": "Insta-Webyar Instagram security desk in light and dark theme",
     "twitterCard": "summary_large_image",
     "twitterHandle": "@InstaWebyar",
     "author": "Insta-Webyar Studio",
@@ -25,9 +25,10 @@
     "themeColorDark": "#020617"
   },
   "announcement": {
-    "label": "Spring release",
-    "message": "Introducing motion presets, AI captions in 32 languages, and real-time collaboration.",
-    "href": "#changelog"
+    "label": "Security Update",
+    "message": "Our new Persian recovery desk rescues shadow-banned accounts in under 48 hours with full audit logs.",
+    "href": "#blueprint",
+    "cta": "See protocol"
   },
   "navigation": [
     {
@@ -35,83 +36,90 @@
       "href": "#hero"
     },
     {
-      "label": "Features",
+      "label": "Services",
       "href": "#features"
     },
     {
-      "label": "Experience",
-      "href": "#experience"
+      "label": "Security",
+      "href": "#blueprint"
     },
     {
-      "label": "Insights",
-      "href": "#analytics"
+      "label": "Innovation",
+      "href": "#innovation"
     },
     {
-      "label": "Resources",
-      "href": "#blog"
+      "label": "Workflow",
+      "href": "#journey"
     },
     {
       "label": "Pricing",
       "href": "#pricing"
+    },
+    {
+      "label": "Studio",
+      "href": "#studio"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
     }
   ],
   "hero": {
-    "eyebrow": "Insta-Webyar Studio",
-    "title": "Make social storytelling feel bespoke, every single time",
-    "description": "The official Insta-Webyar theme blends BVazir + Vazirmatn typography, cinematic motion, and AI-assisted writing so your brand looks premium across light and dark modes.",
+    "eyebrow": "Persian Instagram Operations",
+    "title": "Shadow-ban recovery, 24/7 admin, and brand-safe growth in one Persian command center",
+    "description": "We combine Instagram policy expertise, on-call security engineers, and bilingual content strategists so your brand stays visible and protected.",
     "primaryAction": {
-      "label": "Start free trial",
+      "label": "Book a security audit",
       "href": "#pricing"
     },
     "secondaryAction": {
-      "label": "Browse template library",
-      "href": "#features"
+      "label": "Download the recovery playbook",
+      "href": "https://imen.webyar.cloud/playbook.pdf"
     },
     "metrics": [
       {
-        "label": "Campaigns launched",
-        "value": "12k+"
+        "label": "Accounts restored",
+        "value": "430+"
       },
       {
-        "label": "Avg. approval time",
-        "value": "4.2h"
+        "label": "Shadow-ban lift time",
+        "value": "<48h"
       },
       {
-        "label": "Engagement lift",
-        "value": "+168%"
+        "label": "Incident response",
+        "value": "15m average"
       }
     ],
     "highlights": [
-      "Adaptive layouts respond to every device width and input type",
-      "Curated palette system with instant light / dark parity",
-      "Collaboration timeline with contextual voice notes"
+      "Dedicated Persian admin team available seven days a week",
+      "Policy-compliant publishing that protects your verification badge",
+      "Security desk integrates with WhatsApp, Telegram, and email"
+    ],
+    "footnotes": [
+      "Full SSR delivery on Cloudflare Workers keeps every status page real time.",
+      "Lazy loading ensures sensitive dashboards stay encrypted until viewed."
     ],
     "media": {
-      "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
-      "href": "https://unsplash.com/photos/U3sOwViXhkY",
-      "alt": "Creative marketing team collaborating around a laptop and camera equipment",
-      "caption": "Teams rely on Insta-Webyar dashboards to storyboard polished Instagram campaigns.",
+      "src": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80",
+      "href": "https://unsplash.com/photos/l8BvDmt8Ac4",
+      "alt": "Security analysts reviewing Instagram account health dashboards",
+      "caption": "Our recovery desk tracks every policy escalation and evidence packet in one secure view.",
       "width": 1200,
       "height": 800
     }
   },
   "trustbar": {
-    "title": "Trusted by experience-led teams",
+    "title": "Trusted by resilient regional brands",
     "logos": [
       {
-        "name": "Neshan",
-        "src": "/assets/logos/neshan.svg",
-        "href": "https://neshan.org/"
+        "name": "Digipay",
+        "src": "/assets/logos/digipay.svg",
+        "href": "https://www.digipay.ir/"
       },
       {
-        "name": "Quantic Labs",
-        "src": "/assets/logos/quantic-labs.svg",
-        "href": "https://quanticlabs.co/"
-      },
-      {
-        "name": "Karvan",
-        "src": "/assets/logos/karvan.svg",
-        "href": "https://karvan.com/"
+        "name": "Zardab",
+        "src": "/assets/logos/zardab.svg",
+        "href": "https://zardab.agency/"
       },
       {
         "name": "Hafez Media",
@@ -119,241 +127,617 @@
         "href": "https://hafezmedia.com/"
       },
       {
-        "name": "Studio Simorgh",
-        "src": "/assets/logos/studio-simorgh.svg",
-        "href": "https://studiosimorgh.com/"
+        "name": "Parto",
+        "src": "/assets/logos/parto.svg",
+        "href": "https://partodigital.com/"
       },
       {
         "name": "Nova Growth",
         "src": "/assets/logos/nova-growth.svg",
         "href": "https://novagrowth.io/"
+      },
+      {
+        "name": "Studio Simorgh",
+        "src": "/assets/logos/studio-simorgh.svg",
+        "href": "https://studiosimorgh.com/"
+      }
+    ]
+  },
+  "marquee": {
+    "title": "Live Instagram assurance",
+    "subtitle": "Continuous monitoring for policy flags, bots, and paid media performance.",
+    "description": "Our Persian analysts and automation keep your account compliant while your content team executes.",
+    "ribbons": [
+      "Shadow-ban diagnostics",
+      "Two-factor sweep automation",
+      "Real-time hashtag health",
+      "Bilingual content QA",
+      "Crisis escalation hotline",
+      "Ad account safeguard",
+      "Story accessibility audits",
+      "Regional trend calendar"
+    ],
+    "metrics": [
+      {
+        "label": "Policy disputes won",
+        "value": "92%",
+        "description": "Instagram Business Support documented resolutions"
+      },
+      {
+        "label": "Security incidents prevented",
+        "value": "1.8k",
+        "description": "Blocked phishing & brute-force attempts"
+      },
+      {
+        "label": "Average engagement lift",
+        "value": "+138%",
+        "description": "Across 8-tier growth retainers"
       }
     ]
   },
   "features": {
-    "title": "Every layer tuned for premium UI/UX",
-    "subtitle": "Build immersive campaigns with modular design primitives and AI assistance.",
+    "eyebrow": "Core services",
+    "title": "Everything you need to run Instagram like a resilient newsroom",
+    "subtitle": "Modular squads coordinate admin, security, creative, and analytics for you.",
     "sections": [
       {
-        "id": "templating",
-        "title": "Template Atelier",
-        "description": "Swap between 240+ cinematic compositions, animate elements with choreographed easing, and export in retina-perfect formats.",
+        "id": "operations",
+        "title": "Account command center",
+        "description": "Daily admin coverage, bilingual moderation, and real-time policy watch from Tehran and Istanbul.",
+        "ribbon": "Ops",
+        "meta": "Integrated with Meta Business Suite and Creator Studio",
         "bullets": [
           {
-            "icon": "palette",
-            "title": "Precision layouts",
-            "description": "Auto-adjust typography, margins, and imagery with smart breakpoint rules."
+            "icon": "layers",
+            "title": "Ops calendar",
+            "description": "Unified post, story, and live plan synced with WhatsApp approvals."
           },
           {
-            "icon": "brain",
-            "title": "Contextual AI",
-            "description": "Generate localized captions, alt text, and CTA ideas based on your creative brief."
-          },
-          {
-            "icon": "joystick",
-            "title": "Motion recipes",
-            "description": "Apply tasteful transitions and micro-interactions built with GPU-optimized animation tokens."
-          }
-        ]
-      },
-      {
-        "id": "brand-kit",
-        "title": "Brand Command Center",
-        "description": "Keep every asset on-brand with enforceable guardrails and collaborative review flows.",
-        "bullets": [
-          {
-            "icon": "shield",
-            "title": "Guardrails",
-            "description": "Lock fonts, spacing, and tone to maintain official brand presence."
-          },
-          {
-            "icon": "handshake",
-            "title": "Approvals",
-            "description": "Route story drafts through comments, annotations, and sign-off checkpoints."
-          },
-          {
-            "icon": "box",
-            "title": "Asset vault",
-            "description": "Manage reusable overlays, stickers, and music beds in one organized system."
-          }
-        ]
-      },
-      {
-        "id": "automation",
-        "title": "Automation Playbooks",
-        "description": "Trigger workflows that personalize stories, schedule posts, and analyze engagement in real time.",
-        "bullets": [
-          {
-            "icon": "bolt",
-            "title": "Smart scheduling",
-            "description": "Coordinate posts with AI-generated best-time insights across time zones."
-          },
-          {
-            "icon": "chart",
-            "title": "Live dashboards",
-            "description": "Monitor reach, saves, taps, and conversions with signature Pro UI widgets."
+            "icon": "chat",
+            "title": "Inbox triage",
+            "description": "Assign DMs and comments to Persian/English specialists with SLA timers."
           },
           {
             "icon": "loop",
-            "title": "Reusable flows",
-            "description": "Clone entire campaigns, remix assets, and automate publishing to every channel."
+            "title": "Escalation rules",
+            "description": "Route policy-sensitive items to your legal or PR teams instantly."
+          }
+        ],
+        "media": {
+          "src": "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Instagram admin team coordinating calendars",
+          "caption": "Every post, story, and ad is tracked with approvals and compliance tags.",
+          "width": 1200,
+          "height": 720
+        }
+      },
+      {
+        "id": "security",
+        "title": "Security watchtower",
+        "description": "Dedicated incident response for account recovery, verification, and breach containment.",
+        "ribbon": "Security",
+        "meta": "ISO-aligned protocols with encrypted audit logs",
+        "bullets": [
+          {
+            "icon": "shield",
+            "title": "Shadow-ban rescue",
+            "description": "Evidence-driven appeals and content rewrites clear strikes fast."
+          },
+          {
+            "icon": "radar",
+            "title": "Threat radar",
+            "description": "Monitor logins, API usage, and ad spend anomalies in real time."
+          },
+          {
+            "icon": "lock",
+            "title": "Hardening kits",
+            "description": "Step-by-step MFA, device hygiene, and admin rotation policies."
           }
         ]
+      },
+      {
+        "id": "growth",
+        "title": "Growth intelligence lab",
+        "description": "Creative experiments tied to clean metrics so growth never risks account trust.",
+        "ribbon": "Growth",
+        "meta": "Persian-first insight reports with English executive summaries",
+        "bullets": [
+          {
+            "icon": "target",
+            "title": "Audience heatmaps",
+            "description": "Discover when your core segments engage and how to avoid fatigue."
+          },
+          {
+            "icon": "chart",
+            "title": "Campaign cockpit",
+            "description": "SSR dashboards merge Instagram, Telegram, and Shopify conversions."
+          },
+          {
+            "icon": "sparkles",
+            "title": "Story labs",
+            "description": "AR filters, motion presets, and caption AI tuned to brand tone."
+          }
+        ],
+        "media": {
+          "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Marketing strategists reviewing analytics",
+          "caption": "Growth experiments are approved only when security baselines stay green.",
+          "width": 1200,
+          "height": 720
+        }
       }
     ]
   },
   "experience": {
-    "title": "Experience the official Insta-Webyar flow",
-    "subtitle": "Designed mobile-first with pixel-perfect responsiveness and thoughtful accessibility.",
+    "title": "Executive level clarity",
+    "subtitle": "We align every squad with measurable promises.",
     "pillars": [
       {
-        "title": "Immersive workspace",
-        "description": "Arrange blocks with drag handles, advanced snapping, and real-time device previews."
+        "badge": "24/7",
+        "title": "Always-on admin",
+        "description": "Round-the-clock moderation, publishing, and escalation coverage."
       },
       {
-        "title": "Collaborative canvas",
-        "description": "Leave inline feedback, mention teammates, and resolve threads with audit-ready history."
+        "badge": "SOC",
+        "title": "Security desk",
+        "description": "Incident handlers track and close tickets with documented responses."
       },
       {
-        "title": "Insight-driven decisions",
-        "description": "Blend qualitative storytelling with quantitative analytics in a unified panel."
+        "badge": "HQ",
+        "title": "Growth command",
+        "description": "Quarterly planning sprints tied to revenue and retention goals."
       }
     ],
     "cards": [
       {
-        "title": "Responsive by design",
-        "description": "Story frames scale fluidly from 320px mobile breakpoints up to 4K displays using fractional spacing and type ramps.",
+        "index": "01",
+        "label": "Visibility",
+        "title": "Clear policies, no surprises",
+        "description": "We translate Instagram's evolving Persian policies into checklists your team can trust.",
         "points": [
-          "Density controls for content-heavy campaigns",
-          "RTL-aware layouts with Vazirmatn as default script",
-          "Configurable safe areas for platform overlays"
+          "Content review matrix covering 42 risk scenarios",
+          "Every decision tracked with reviewer and timestamp",
+          "Report library translated for leadership"
+        ],
+        "metric": {
+          "label": "Policy variance",
+          "value": "<2%"
+        }
+      },
+      {
+        "index": "02",
+        "label": "Assurance",
+        "title": "Secure from day one",
+        "description": "Security onboarding hardens access before any content goes live.",
+        "points": [
+          "Device & password hygiene workshops",
+          "Two-factor enforcement across all admins",
+          "Weekly threat intel brief in Persian"
+        ],
+        "metric": {
+          "label": "Incidents escalated",
+          "value": "0 critical"
+        }
+      },
+      {
+        "index": "03",
+        "label": "Growth",
+        "title": "Measure what matters",
+        "description": "Track story completions, saves, DM replies, and attributed sales in one SSR dashboard.",
+        "points": [
+          "Segment performance heatmaps",
+          "Quarterly executive summaries",
+          "Benchmarking across 18 industries"
+        ],
+        "metric": {
+          "label": "Engagement lift",
+          "value": "+138%"
+        }
+      }
+    ]
+  },
+  "blueprint": {
+    "title": "Security blueprint",
+    "subtitle": "Four Persian playbooks keep your Instagram account resilient.",
+    "description": "Every client receives a localized manual that merges Meta best practices with Iranian regulatory reality.",
+    "layers": [
+      {
+        "intent": "guard",
+        "intentLabel": "Protect",
+        "name": "Identity & access",
+        "description": "Secure admin roles, device posture, and approvals before publishing.",
+        "capabilities": [
+          "Enforce MFA and biometric checks",
+          "Limit risky third-party app tokens",
+          "Run quarterly access reviews"
+        ],
+        "insight": "88% of hijacks we rescue begin with shared credentials."
+      },
+      {
+        "intent": "monitor",
+        "intentLabel": "Detect",
+        "name": "Policy watch",
+        "description": "Automated scanning for shadow bans, muted reach, and guideline strikes.",
+        "capabilities": [
+          "Daily reach anomaly detection",
+          "Caption & hashtag compliance scoring",
+          "Region-specific policy alerts"
         ]
       },
       {
-        "title": "Dark mode that feels intentional",
-        "description": "Colors, shadows, and typography invert using perceptually-uniform tokens for consistent contrast.",
-        "points": [
-          "Hue-preserving gradients and overlays",
-          "Tone-mapped imagery with adaptive luminance",
-          "WCAG AA+ verified combinations"
+        "intent": "respond",
+        "intentLabel": "Recover",
+        "name": "Incident desk",
+        "description": "Escalation paths with Instagram Business Support in Persian and English.",
+        "capabilities": [
+          "Evidence packet preparation",
+          "Appeal submissions with legal context",
+          "Crisis communication templates"
+        ],
+        "insight": "Average shadow-ban lift occurs within 36 hours once evidence is submitted."
+      },
+      {
+        "intent": "optimize",
+        "intentLabel": "Grow",
+        "name": "Campaign assurance",
+        "description": "Keep growth experiments within risk tolerances so trust never dips.",
+        "capabilities": [
+          "Story and reel accessibility testing",
+          "Ad spend guardrails tied to ROAS",
+          "Compliance-friendly creative direction"
         ]
+      }
+    ]
+  },
+  "innovation": {
+    "title": "Innovation",
+    "subtitle": "Reimagining Instagram admin with real engineering",
+    "description": "SSR dashboards, lazy loading, and AI-assisted workflows keep your operations responsive and secure.",
+    "columns": [
+      {
+        "title": "Live SSR intelligence",
+        "description": "Every dashboard renders at the edge so your team sees accurate reach and appeal status instantly.",
+        "points": [
+          "Cloudflare Workers multi-region SSR",
+          "Encrypted cache for sensitive metrics",
+          "Seamless toggle between Persian and English"
+        ]
+      },
+      {
+        "title": "Precision lazy loading",
+        "description": "Interactive charts stay lightweight until agents need them, protecting bandwidth and privacy.",
+        "points": [
+          "Intersection Observer with graceful fallback",
+          "Segmented bundles per section",
+          "Perf budgets tuned for mobile-first teams"
+        ]
+      },
+      {
+        "title": "AI with guardrails",
+        "description": "Caption AI and comment responders operate under policy-aware prompts and human review.",
+        "points": [
+          "Persian/English tone presets",
+          "Toxicity & compliance filters",
+          "Reviewer queues with justification tracking"
+        ]
+      }
+    ]
+  },
+  "journey": {
+    "title": "Workflow",
+    "subtitle": "From audit to unshakeable Instagram presence",
+    "description": "Our onboarding path removes risk and builds measurable momentum.",
+    "steps": [
+      {
+        "title": "Security & visibility audit",
+        "description": "Deep-dive into access, content, and paid integrations to map risks.",
+        "details": [
+          "Shadow-ban and reach diagnosis",
+          "Admin roster & device review",
+          "Policy compliance scoring"
+        ]
+      },
+      {
+        "title": "Recovery playbook",
+        "description": "Deploy immediate fixes, submit appeals, and align on content guardrails.",
+        "details": [
+          "Appeal templates localized in Persian",
+          "Crisis communication channels",
+          "Content risk taxonomy"
+        ]
+      },
+      {
+        "title": "Admin takeover",
+        "description": "Our bilingual operators manage publishing, moderation, and reporting.",
+        "details": [
+          "SLA-backed moderation coverage",
+          "Executive dashboards updated twice daily",
+          "Policy changes broadcast to your stakeholders"
+        ]
+      },
+      {
+        "title": "Growth lab activation",
+        "description": "Test campaigns with confidence knowing security thresholds stay green.",
+        "details": [
+          "Creative experiment backlog",
+          "Attribution reporting",
+          "Quarterly business reviews"
+        ]
+      }
+    ]
+  },
+  "studio": {
+    "title": "Studio",
+    "subtitle": "Multidisciplinary team inside your Instagram admin desk",
+    "description": "Strategists, analysts, and producers work as one Persian-first squad.",
+    "cards": [
+      {
+        "icon": "🛡️",
+        "title": "Security strategists",
+        "description": "Analysts fluent in Instagram policy and regional regulations.",
+        "highlights": [
+          "Policy & compliance desk",
+          "Evidence packet authors",
+          "Verification support"
+        ],
+        "badge": "SOC"
+      },
+      {
+        "icon": "🗂️",
+        "title": "Admin operators",
+        "description": "Bilingual specialists who publish, moderate, and escalate with precision.",
+        "highlights": [
+          "Calendar & approvals",
+          "Inbox and comment routing",
+          "24/7 coverage"
+        ],
+        "badge": "Ops"
+      },
+      {
+        "icon": "📈",
+        "title": "Growth architects",
+        "description": "Creative technologists delivering brand-safe experiments and reports.",
+        "highlights": [
+          "Campaign prototyping",
+          "Analytics & attribution",
+          "Executive briefings"
+        ],
+        "badge": "Lab"
       }
     ]
   },
   "workflow": {
-    "title": "A guided path from idea to publish",
+    "title": "Operational assurances",
     "steps": [
       {
-        "title": "Brief & moodboard",
-        "description": "Input campaign goals, drop inspiration references, and let the AI moodboard curate assets that match your tone."
+        "title": "Policy desk",
+        "description": "Weekly policy digest translated to Persian with recommended actions.",
+        "details": [
+          "Highlight new Instagram rules",
+          "Flag risky content patterns",
+          "Update crisis checklist"
+        ]
       },
       {
-        "title": "Compose & adapt",
-        "description": "Drag, resize, and adapt templates with live breakpoints, auto-captioning, and guided contrast checks."
+        "title": "Security sync",
+        "description": "Bi-weekly review of access logs, alerts, and resolved incidents.",
+        "details": [
+          "Audit login activity",
+          "Validate MFA status",
+          "Refresh emergency contacts"
+        ]
       },
       {
-        "title": "Preview & launch",
-        "description": "Simulate taps, hold interactions, and schedule across platforms with automation hooks."
+        "title": "Growth council",
+        "description": "Monthly strategy with revenue, retention, and creative KPIs.",
+        "details": [
+          "Report on experiments",
+          "Prioritize next campaigns",
+          "Share cross-platform insights"
+        ]
+      },
+      {
+        "title": "Executive briefing",
+        "description": "Quarterly board-level summary with risk posture and wins.",
+        "details": [
+          "Security & compliance score",
+          "Growth impact overview",
+          "Roadmap alignment"
+        ]
       }
     ],
     "cta": {
-      "label": "View automation recipes",
-      "href": "#automation"
+      "label": "Download operations checklist",
+      "href": "https://imen.webyar.cloud/operations-checklist.pdf"
     }
   },
-  "analytics": {
-    "title": "Insights that surface the why",
-    "subtitle": "Understand audience sentiment, conversion paths, and creative performance from a single command center.",
-    "cards": [
-      {
-        "title": "Engagement intelligence",
-        "description": "See swipe-away reasons, next-best-action suggestions, and AI-generated experiment ideas."
-      },
-      {
-        "title": "Attribution clarity",
-        "description": "Trace link clicks to downstream sales, retarget top segments, and export investor-ready reports."
-      },
-      {
-        "title": "Team operations",
-        "description": "Track review cycles, production velocity, and utilization to keep teams aligned."
-      }
-    ]
-  },
-  "caseStudies": {
-    "title": "Stories from ambitious teams",
-    "items": [
-      {
-        "name": "GlowUp Cosmetics",
-        "headline": "+212% story saves in 45 days",
-        "summary": "Automated content calendars and data-driven A/B tests led to a viral seasonal launch.",
-        "link": "#glowup"
-      },
-      {
-        "name": "Voyage Mobility",
-        "headline": "Global rollout with localized assets",
-        "summary": "Leveraged RTL-ready themes and motion recipes to coordinate launches across 18 markets.",
-        "link": "#voyage"
-      }
-    ]
-  },
-  "testimonials": {
-    "title": "Loved by creative operations leaders",
-    "items": [
-      {
-        "quote": "The official Insta-Webyar theme feels like an internal creative team in a box—polished, fast, and reliable.",
-        "author": "Dorsa Rahimi",
-        "role": "Creative Director, Pixely Studio"
-      },
-      {
-        "quote": "We standardized every campaign workflow with Insta-Webyar. Feedback cycles dropped from days to minutes.",
-        "author": "Reza Moghimi",
-        "role": "Head of Marketing, Navahang"
-      },
-      {
-        "quote": "Dark mode finally looks intentional. The contrast, the micro-interactions, the typography—it's agency-level.",
-        "author": "Sara Farhadi",
-        "role": "Product Marketing Lead, Orbital"
-      }
-    ]
-  },
   "pricing": {
-    "title": "Flexible plans for every stage",
-    "subtitle": "Start with light mode, go pro with dark mode, and scale with automation. All tiers include the official theme.",
+    "title": "Instagram admin retainers",
+    "subtitle": "Eight Persian-first plans from 3M to 25M IRR per month.",
+    "description": "Every tier includes security desk access, SSR dashboards, and bilingual support.",
+    "serviceLabel": "Managed services",
+    "ctaLabel": "Request a tailored session",
+    "guarantee": "7-day guarantee and free migration assistance.",
+    "note": "All prices listed in Iranian Rials with optional USD/EUR invoicing for international HQs.",
+    "highlights": [
+      {
+        "icon": "🛡️",
+        "title": "Policy safe",
+        "description": "Every plan is backed by our incident desk and recovery specialists."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Automated ops",
+        "description": "SSR dashboards and lazy loading keep insights responsive and secure."
+      },
+      {
+        "icon": "🤝",
+        "title": "Dedicated success",
+        "description": "Named Persian success manager tracks KPIs with you."
+      }
+    ],
     "plans": [
       {
-        "name": "Creator",
-        "price": "$19",
-        "billing": "per month",
-        "popular": false,
+        "name": "Starter Shield",
+        "tagline": "For emerging brands",
+        "price": "3,000,000 تومان",
+        "billing": "Monthly",
         "features": [
-          "Unlimited story exports",
-          "40 AI caption generations",
-          "Official light mode theme"
-        ]
+          "Daily publishing support",
+          "Shadow-ban diagnostics",
+          "1 admin profile secured"
+        ],
+        "services": [
+          "Launch in 48 hours",
+          "Email support"
+        ],
+        "cta": {
+          "label": "Launch now",
+          "href": "#contact"
+        },
+        "accent": "calm"
       },
       {
-        "name": "Studio",
-        "price": "$59",
-        "billing": "per month",
+        "name": "Growth Patrol",
+        "tagline": "For active content teams",
+        "price": "5,500,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Moderation with SLAs",
+          "Caption AI (FA/EN)",
+          "Hashtag health dashboard"
+        ],
+        "services": [
+          "90-minute onboarding",
+          "Chat support"
+        ],
+        "cta": {
+          "label": "Secure my feed",
+          "href": "#contact"
+        },
+        "accent": "focus"
+      },
+      {
+        "name": "Agency Response",
+        "tagline": "For creative agencies",
+        "price": "8,900,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "3 workspaces",
+          "White-label reporting",
+          "Appeal preparation"
+        ],
+        "services": [
+          "Creative coaching",
+          "Marketing API access"
+        ],
+        "cta": {
+          "label": "Schedule consult",
+          "href": "#contact"
+        },
+        "accent": "luxe",
         "popular": true,
-        "features": [
-          "Dark mode parity",
-          "Advanced analytics dashboard",
-          "Collaboration timelines",
-          "Priority success coaching"
-        ]
+        "badge": "Popular"
       },
       {
-        "name": "Agency",
-        "price": "$149",
-        "billing": "per month",
-        "popular": false,
+        "name": "Enterprise Guard",
+        "tagline": "For enterprise teams",
+        "price": "12,000,000 تومان",
+        "billing": "Monthly",
         "features": [
-          "Multi-brand workspaces",
-          "White-label exports",
-          "Automation playbooks",
-          "Dedicated technical partner"
-        ]
+          "24/7 moderation",
+          "Advanced lazy loading",
+          "Executive war room"
+        ],
+        "services": [
+          "Dedicated success manager",
+          "Priority escalation"
+        ],
+        "cta": {
+          "label": "Talk to security",
+          "href": "#contact"
+        },
+        "accent": "bold"
+      },
+      {
+        "name": "Safeguard Saffron",
+        "tagline": "For luxury brands",
+        "price": "15,500,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Custom motion presets",
+          "Risk-aware commerce automation",
+          "Crisis rehearsal"
+        ],
+        "services": [
+          "Sales playbook design",
+          "On-site workshops"
+        ],
+        "cta": {
+          "label": "Draft agreement",
+          "href": "#contact"
+        },
+        "accent": "royal"
+      },
+      {
+        "name": "Indigo Strategy",
+        "tagline": "For multi-brand groups",
+        "price": "19,000,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Unlimited projects",
+          "SLA 99.9%",
+          "CRM integrations"
+        ],
+        "services": [
+          "Dedicated DevOps",
+          "Quarterly strategy board"
+        ],
+        "cta": {
+          "label": "Reserve board slot",
+          "href": "#contact"
+        },
+        "accent": "night"
+      },
+      {
+        "name": "Crystal Command",
+        "tagline": "For media holdings",
+        "price": "22,000,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Enterprise tokens",
+          "Role-based controls",
+          "Edge analytics"
+        ],
+        "services": [
+          "Onsite support",
+          "Monthly team training"
+        ],
+        "cta": {
+          "label": "Request proposal",
+          "href": "#contact"
+        },
+        "accent": "diamond"
+      },
+      {
+        "name": "Imperial Response",
+        "tagline": "For global organizations",
+        "price": "25,000,000 تومان",
+        "billing": "Monthly",
+        "features": [
+          "Multi-region architecture",
+          "Compliance alignment",
+          "Legal-ready audit trail"
+        ],
+        "services": [
+          "Custom cloud architecture",
+          "Advanced analytics"
+        ],
+        "cta": {
+          "label": "Enter negotiation",
+          "href": "#contact"
+        },
+        "accent": "imperial"
       }
     ]
   },
@@ -361,99 +745,87 @@
     "title": "FAQ",
     "items": [
       {
-        "question": "Does Insta-Webyar support RTL scripts?",
-        "answer": "Absolutely. The official theme ships with Vazirmatn as the default Farsi typeface and dynamic line-height adjustments."
+        "question": "Can you remove a shadow ban?",
+        "answer": "Yes. We diagnose the content and policy triggers, submit evidence-backed appeals, and rebuild your posting plan to avoid future strikes."
       },
       {
-        "question": "Can we import motion presets?",
-        "answer": "Yes. Upload Lottie, After Effects JSON, or Insta-Webyar native presets and apply them with GPU-accelerated easing."
+        "question": "How fast do you recover hijacked accounts?",
+        "answer": "Most compromised accounts are secured and reinstated within 48 hours once we receive the required verification documents."
       },
       {
-        "question": "How secure is the asset vault?",
-        "answer": "We provide end-to-end encryption, audit logs, and SSO with granular permissions."
+        "question": "Do you work with non-Persian teams?",
+        "answer": "Absolutely. Our dashboards and reports support Persian and English, and we can interface with regional or global leadership."
       }
     ]
   },
   "blog": {
-    "title": "Resource library",
+    "title": "Knowledge base",
+    "subtitle": "Instagram security, admin, and growth intelligence.",
+    "description": "Stay ahead with playbooks, webinars, and policy updates crafted by our bilingual team.",
     "articles": [
       {
-        "title": "Designing motion-first stories",
-        "description": "Craft immersive Instagram stories with layered motion, dynamic typography, and data-backed storytelling.",
-        "href": "#motion"
+        "title": "Shadow-ban recovery in 5 steps",
+        "description": "A Persian guide to diagnosing and reversing reach loss fast.",
+        "href": "https://imen.webyar.cloud/articles/shadowban-recovery",
+        "cta": "Read guide"
       },
       {
-        "title": "The case for intentional dark mode",
-        "description": "Why premium brands launch dual themes and how to maintain contrast ratios without sacrificing personality.",
-        "href": "#dark-mode"
+        "title": "Security desk architecture",
+        "description": "How SSR dashboards and lazy loading keep sensitive Instagram data protected.",
+        "href": "https://imen.webyar.cloud/articles/security-desk",
+        "cta": "Explore blueprint"
       },
       {
-        "title": "Collaboration rituals that scale",
-        "description": "Operational tips from agencies that ship hundreds of campaigns every quarter.",
-        "href": "#collaboration"
+        "title": "Growth without policy risk",
+        "description": "Campaign ideas that respect Instagram rules while boosting conversions.",
+        "href": "https://imen.webyar.cloud/articles/growth-without-risk",
+        "cta": "See playbook"
       }
     ]
   },
   "cta": {
-    "title": "Ready to launch the official Insta-Webyar experience?",
-    "subtitle": "Join thousands of teams shipping premium, data-aware stories without adding headcount.",
+    "title": "Ready to secure and scale your Instagram presence?",
+    "subtitle": "Reserve a private session with our recovery desk and admin strategists.",
     "primaryAction": {
-      "label": "Book a guided tour",
-      "href": "#book"
+      "label": "Reserve session",
+      "href": "#contact"
     },
     "secondaryAction": {
-      "label": "Download spec sheet",
-      "href": "#download"
+      "label": "View compliance checklist",
+      "href": "https://imen.webyar.cloud/compliance-checklist.pdf"
     }
   },
   "footer": {
-    "tagline": "Insta-Webyar — the polished social story OS",
+    "tagline": "Persian-first Instagram admin, security, and growth",
     "links": [
       {
-        "label": "Product",
-        "href": "#features"
+        "label": "Support",
+        "href": "https://imen.webyar.cloud/support"
       },
       {
-        "label": "Security",
-        "href": "#security"
+        "label": "Academy",
+        "href": "https://imen.webyar.cloud/academy"
       },
       {
-        "label": "Status",
-        "href": "#status"
+        "label": "Partners",
+        "href": "https://imen.webyar.cloud/partners"
       }
     ],
     "columns": [
       {
-        "title": "Platform",
+        "title": "Product",
         "links": [
           {
-            "label": "Template library",
+            "label": "Services",
             "href": "#features"
           },
           {
-            "label": "Automation",
-            "href": "#automation"
+            "label": "Pricing",
+            "href": "#pricing"
           },
           {
-            "label": "Integrations",
-            "href": "#integrations"
-          }
-        ]
-      },
-      {
-        "title": "Company",
-        "links": [
-          {
-            "label": "About",
-            "href": "#about"
-          },
-          {
-            "label": "Careers",
-            "href": "#careers"
-          },
-          {
-            "label": "Press",
-            "href": "#press"
+            "label": "Request demo",
+            "href": "#cta"
           }
         ]
       },
@@ -461,20 +833,101 @@
         "title": "Resources",
         "links": [
           {
-            "label": "Blog",
+            "label": "Knowledge base",
             "href": "#blog"
           },
           {
-            "label": "Guides",
-            "href": "#guides"
+            "label": "Webinars",
+            "href": "https://imen.webyar.cloud/webinars"
           },
           {
-            "label": "Support",
-            "href": "mailto:hello@instawebyar.com"
+            "label": "Frequently asked",
+            "href": "#faq"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Contact",
+            "href": "https://imen.webyar.cloud/contact"
+          },
+          {
+            "label": "Telegram",
+            "href": "https://t.me/instawebyar"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://linkedin.com/company/insta-webyar"
           }
         ]
       }
     ],
-    "legal": "© 2024 Insta-Webyar. All rights reserved."
+    "legal": "© {year} Insta-Webyar. All rights reserved."
+  },
+  "analytics": {
+    "title": "Security observability dashboards",
+    "subtitle": "Edge-rendered intelligence keeps every recovery effort measurable.",
+    "cards": [
+      {
+        "title": "Shadow-ban radar",
+        "description": "Live detection of muted reach, guideline strikes, and appeal status across all profiles.",
+        "insight": "Updated every 15 minutes from Instagram and Meta APIs"
+      },
+      {
+        "title": "Access hygiene monitor",
+        "description": "Track MFA status, device posture, and login anomalies for every admin seat.",
+        "insight": "Automatic alerts when a device falls out of compliance"
+      },
+      {
+        "title": "Attribution clarity",
+        "description": "Blend Instagram, Telegram, and commerce data to connect revenue with risk posture.",
+        "insight": "Executive summaries packaged for board-ready reporting"
+      }
+    ]
+  },
+  "caseStudies": {
+    "title": "Proven recoveries",
+    "items": [
+      {
+        "name": "Saffron Boutique",
+        "headline": "Shadow-ban lifted and sales up 162%",
+        "summary": "We rebuilt the content calendar, submitted appeals, and restored full reach in 36 hours.",
+        "link": "https://imen.webyar.cloud/case-studies/saffron-boutique"
+      },
+      {
+        "name": "Parto Tech",
+        "headline": "24/7 security desk prevents future lockouts",
+        "summary": "New admin policies and MFA enforcement stopped credential sharing and phishing losses.",
+        "link": "https://imen.webyar.cloud/case-studies/parto-tech"
+      },
+      {
+        "name": "Hafez Media",
+        "headline": "Incident playbooks stabilise regional campaigns",
+        "summary": "Crisis communications, escalation templates, and SSR dashboards aligned every stakeholder.",
+        "link": "https://imen.webyar.cloud/case-studies/hafez-media"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Trusted by operations leaders",
+    "items": [
+      {
+        "quote": "Insta-Webyar rescued our flagship account in two days and trained our team to stay compliant.",
+        "author": "Parisa Etemadi",
+        "role": "Head of Digital, Saffron Boutique"
+      },
+      {
+        "quote": "The security desk handles every escalation before it hits the executive WhatsApp.",
+        "author": "Kourosh Farzad",
+        "role": "Marketing Director, Parto Tech"
+      },
+      {
+        "quote": "We finally have Persian dashboards that show both growth and risk in one view.",
+        "author": "Laleh Daryaei",
+        "role": "Chief Communications Officer, Hafez Media"
+      }
+    ]
   }
 }

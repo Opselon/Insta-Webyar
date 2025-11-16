@@ -11,6 +11,11 @@ export type IconId =
   | 'chart'
   | 'loop'
   | 'target'
+  | 'globe'
+  | 'layers'
+  | 'sparkles'
+  | 'cloud'
+  | 'radar'
   | 'blueprint'
   | 'wand'
   | 'lock'
@@ -110,6 +115,38 @@ const TargetIcon = createSvg([
   <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none" />
 ]);
 
+const GlobeIcon = createSvg([
+  <circle cx="12" cy="12" r="7.5" />,
+  <path d="M4.8 9h14.4" />,
+  <path d="M4.8 15h14.4" />,
+  <path d="M12 4.5c2.4 2.6 2.4 12.4 0 15" />,
+  <path d="M12 4.5c-2.4 2.6-2.4 12.4 0 15" />
+]);
+
+const LayersIcon = createSvg([
+  <path d="m12 5 7 4-7 4-7-4Z" />,
+  <path d="m5 13 7 4 7-4" />,
+  <path d="m5 17 7 4 7-4" />
+]);
+
+const SparklesIcon = createSvg([
+  <path d="M12 5.5 13.6 9l3.4 1.4L13.6 12l-1.6 3.5L10.4 12 7 10.4 10.4 9Z" />,
+  <path d="M6.5 4 7.4 6l2 .6-2 .6-.9 2-.9-2-2-.6 2-.6Z" />,
+  <path d="M16.5 14l.9 2 2 .6-2 .6-.9 2-.9-2-2-.6 2-.6Z" />
+]);
+
+const CloudIcon = createSvg([
+  <path d="M8.5 18.5h8.5a3 3 0 0 0 .5-6 4.5 4.5 0 0 0-8.8-1.4A3.5 3.5 0 0 0 8.5 18.5Z" />
+]);
+
+const RadarIcon = createSvg([
+  <circle cx="12" cy="12" r="7.5" />,
+  <circle cx="12" cy="12" r="4.5" />,
+  <path d="M12 12 16.5 7.5" />,
+  <path d="M12 4.5v3" />,
+  <path d="M19.5 12h-3" />
+]);
+
 const BlueprintIcon = createSvg([
   <path d="M6.5 4.5h8.5a2.5 2.5 0 0 1 2.5 2.5v10a2.5 2.5 0 0 1-2.5 2.5h-8.5a2.5 2.5 0 0 1-2.5-2.5V7a2.5 2.5 0 0 1 2.5-2.5Z" />,
   <path d="M9 9h6" />,
@@ -148,6 +185,11 @@ export const iconRegistry: Record<IconId, IconComponent> = {
   chart: ChartIcon,
   loop: LoopIcon,
   target: TargetIcon,
+  globe: GlobeIcon,
+  layers: LayersIcon,
+  sparkles: SparklesIcon,
+  cloud: CloudIcon,
+  radar: RadarIcon,
   blueprint: BlueprintIcon,
   wand: WandIcon,
   lock: LockIcon,
